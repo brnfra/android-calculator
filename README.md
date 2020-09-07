@@ -5,7 +5,7 @@ On MIT License with any warranties!
 
 ### Todo
 
-[] Organize the classes
-[] Implement expressions by operations()
-[] +/- Button
-[] Add action-menu
+- [] Organize the classes
+- [] Implement expressions by operations()
+- [] +/- Button
+- [] Add action-menu
