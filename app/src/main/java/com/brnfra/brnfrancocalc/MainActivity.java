@@ -442,7 +442,6 @@ private static final String Tag = "Leituras";
             public void onClick(View view) {
                                         //se a opcao eh SOMA apague outros sinais se houver
                 if ( ( saida.endsWith("-") || saida.endsWith("x") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 1)){
-
                     saida = saida.substring(0, saida.length() - 1);
                     saida = saida.concat("+");
                      txtRes.setText(saida);
@@ -466,9 +465,7 @@ private static final String Tag = "Leituras";
                                         //vide class operacoes
                                         //flag Continua se vem da operação de igaldade ou click +
                 if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
-
                     operacoes.setParcela(number);
-
                                         //primeira parcela
                     operacoes.setResult(operacoes.getParcela());
                     operacoes.setAcumulador(operacoes.getParcela());
@@ -478,7 +475,6 @@ private static final String Tag = "Leituras";
                                         //numeros negativos
                     if(operacoes.getResult() < 0){
                         saida = ""+operacoes.getResult();
-
                         saida = "(" + saida + ")" + "+";
                         txtRes.setText(saida);
 
@@ -488,33 +484,30 @@ private static final String Tag = "Leituras";
 
                     }
 
-                }else if (!number.equals("")){
+                }else if ((!number.equals("")) && (operacoes.getOperacao() == 1)){
+//                    Log.d(Tag,"Click soma = ");
+//                    Log.d(Tag,"Number = "+number);
+//                    Log.d(Tag,"parcela = "+operacoes.getParcela());
+//                    Log.d(Tag,"Operacao = "+operacoes.getOperacao());
                                         //parcela 2 em diante
                     operacoes.setParcela(number);
                     operacoes.add();
-
                                             //saida com muitos digitos
                     if (saida.length() > 9){
-                        saida = operacoes.getResult()+"+";
+                        saida = "+"+operacoes.getResult();
                         txtRes.setText(saida);
-
                     }else{
-
                         if(operacoes.getResult() < 0){
                             saida = ""+operacoes.getResult();
                             saida = "(" + saida + ")" + "+";
                             txtRes.setText(saida);
-
                         }else {
-
                             saida = saida.concat("+");
                             txtRes.setText(saida);
-
                         }
                     }
                     operacoes.setContinua(continua+1);
                 }
-
                 number = "";
                 operacoes.setParcela("0");
             }
@@ -537,10 +530,12 @@ private static final String Tag = "Leituras";
                                     //sucessivas operacoes
                                     //vide class operacoes
                 if(operacoes.getOperacao() == 5){
-                    number = "";
+                    //number = "";
                     number = String.valueOf(operacoes.getAcumulador()) ;
                     operacoes.setResult(operacoes.getAcumulador());
                     saida =operacoes.showResult(operacoes.getParcela()) ;
+                    saida=saida + "-";
+                    txtRes.setText(saida);
                     operacoes.setOperacao(2);
                 }
 
@@ -565,16 +560,20 @@ private static final String Tag = "Leituras";
                     }
 
 
-                }else if (!number.equals("")){
+                }else if (!number.equals("") && (operacoes.getOperacao() == 2)){
+
+//Log.d(Tag,"Click sub = ");
+//Log.d(Tag,"Number = "+number);
+//Log.d(Tag,"parcela = "+operacoes.getParcela());
+//Log.d(Tag,"Operacao = "+operacoes.getOperacao());
 
                     operacoes.setParcela(number);
                     operacoes.subt();
                                     //saida mais l;egivel
                     if (saida.length() > 9){
-                        saida = operacoes.getResult()+"-";
+                        saida = "-"+operacoes.getResult();
                         txtRes.setText(saida);
                     }else{
-
                         if(operacoes.getResult() < 0){
                             saida = ""+operacoes.getResult();
                             saida = "(" + saida + ")" + "-";
@@ -584,10 +583,8 @@ private static final String Tag = "Leituras";
                             txtRes.setText(saida);
                         }
                     }
-
-
+                    operacoes.setContinua(continua+1);
                 }
-
                 number = "";
                 operacoes.setParcela("0");
             }
