@@ -6,7 +6,7 @@ On MIT License without any warranties!
 ### Todo
 
 - [ ] Organize the classes
-- [ ] Acessibility
+- [ ] Accessibility
 - [ ] Implement expressions by operations()
 - [ ] +/- Button
 - [ ] Add action-menu
