@@ -1,10 +1,10 @@
 package com.brnfra.brnfrancocalc;
 /*
- * Author: Bruno do Nascimento Franco
- * RU 2575362
- *  App calculadora simples; Realiza as 4 operações básicas(=,+-x/)
- *  Classe com pas principais funcionalidades da calculadora
- * */
+* Author: Bruno do Nascimento Franco
+* RU 2575362
+* A simple App to calc; Realize only four basic operations( + - x ÷ ) 
+* Class with the main functionalities of calculator
+*/
 import static java.lang.Math.abs;
 import static java.lang.Math.floor;
 
@@ -13,14 +13,14 @@ public class Operacoes {
     private int operacao, continua;
 
     /*
-    * codigo das operacoes
-    * soma = 1
-    * subtracao = 2
-    * multiplicacao = 3
-    * divisao =4
-    * op = 5 operacao apos o resultado
-    * Acumulador = armazena valor para proximas operacoes
-    * continua = flag de operações contínuas
+    * Operations code
+    * Add = 1
+    * Subtract = 2
+    * Multiply = 3
+    * Divide =4
+    * op code = 5 operation after result
+    * Acumulador = save the last result 
+    * continue flag = flag continue operations
     * */
 
     public int getContinua() {
@@ -35,14 +35,14 @@ public class Operacoes {
     public void setAcumulador(double acumulador) {
         this.acumulador = acumulador;
     }
-    //OPERAÇAO
+    //Operation
     public int getOperacao() {
         return operacao;
     }
     public void setOperacao(int operacao) {
         this.operacao = operacao;
     }
-      //RESULTADO
+      //RESULT
     public double getResult() {
         return result;
     }
@@ -53,7 +53,7 @@ public class Operacoes {
         }
         this.result = result;
     }
-    //PARCELA
+    //Portion
     public double getParcela() {
         return parcela;
     }
@@ -61,13 +61,14 @@ public class Operacoes {
 
         double par;
         try {
-             //converte string para double
+             //convert string to double
             if(!parcela.equals("")) {
                 par = Double.valueOf(parcela);
                 this.parcela = par;
             }
         } catch (Throwable e) {
             e.printStackTrace();
+                    //try -0xE
             this.parcela = -999999;
         }
 
@@ -75,7 +76,7 @@ public class Operacoes {
      //ADD
     public void add(){
         double num1;
-        num1 = getParcela();         //Parcela armazenada
+        num1 = getParcela();         //Parcela saved
         this.result += num1;
         this.acumulador += num1;
 
@@ -83,7 +84,7 @@ public class Operacoes {
      //SUB
     public void subt(){
         double num1, num2, num3;
-        num1 = getParcela();         //Parcela armazenada
+        num1 = getParcela();         //Parcela saved
         num2 = this.result;
         num3 = this.acumulador;
         this.result = num2 - num1 ;
@@ -92,18 +93,18 @@ public class Operacoes {
     //MULTI
     public void multi(){
         double num1;
-        num1 = getParcela();         //Parcela armazenada
+        num1 = getParcela();         //Parcela saved
         this.result = num1*this.result;
         this.acumulador = num1*this.acumulador;
     }
     //DIVID
     public void divid(){
         double num1, num2, num3;
-        num1 = getParcela();         //Parcela armazenada
+        num1 = getParcela();         //Parcela saved
         num2 = this.result;
         num3 = this.acumulador;
 
-                                    //tratamento
+                                    //exceptions
         try {
             //div por zero
             this.result = num2 / num1;
@@ -115,7 +116,7 @@ public class Operacoes {
 
         }
     }
-    //conta pontos no numero(operacoes fracionarias)
+    //number dot counter (fracionaries operations)
     public int dotCounter(String numberWord){
         int count =0;
         char dot = '.';
@@ -124,7 +125,7 @@ public class Operacoes {
         }
         return count;
     }
-    //conta zeros no numero
+    //zero counter
     public int zeroCounter(String numberWord){
         int count =0;
         char zero = '0';
@@ -133,27 +134,27 @@ public class Operacoes {
         }
         return count;
     }
-    //mostra saidas e resultados
+    //show outputs and results 
     public String showResult(double number){
 
-                            //int chega no overflow em 2^31 -1 long -e mais adequado
+                            //int chega no overflow em 2^31 -1(dez dígitos calculadora chega a 12 no visor) type long - é mais adequado
                             //
-                            //recebe number se number for inteiro
+                            //if number is a iteger filter to show 
         long intNum;
         String show;
 
         try {
-
+                                //fractino of number
             if ( abs(number) < 1e-100)  return "0";
 
-            //tratamento de inteiros acima de 11 digitos
+                            // integer tratment to show above eleven digits
             if ( abs(number) > 1e+11 ){
                 show = String.format("%(1.3e",number);
                 return show;
 
             }
             if (floor(number) == number) {
-                // res é um inteiro
+                                   // res is a integer
                 intNum = (long)number;
                 show = Long.toString(intNum);
 
@@ -165,7 +166,7 @@ public class Operacoes {
                // show = String.format("%3E",intNum);
                 return show;
             } else {
-                                //number caso nao seja inteiro
+                                //number , if its not a integer
 
                 if ( abs(number) < 1e-2) {
                     show = String.format("%(1.2e",number);
@@ -177,8 +178,6 @@ public class Operacoes {
                 }
             }
         }catch (Throwable e){
-            //private double result, parcela, acumulador;
-            //private int operacao, continua;
                operacao =0;
                continua=0;
                result=0;
