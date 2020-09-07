@@ -2,9 +2,9 @@ package com.brnfra.brnfrancocalc;
 /*
 * Author: Bruno do Nascimento Franco
 * RU 2575362
-*  App calculadora simples; Realiza as 4 operações básicas(=,+-x/)
+* A simple App to calc; Realize only four basic operations( + - x ÷ ) 
 *
-* */
+*/
 
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 String number="";
 String saida="";
-                                            //logs para debugar
+                                            //Tag to debug
 private static final String Tag = "Leituras";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ private static final String Tag = "Leituras";
         Button btnAC = (Button) findViewById(R.id.btnAC);
         Button btnEquals = (Button) findViewById(R.id.btnEquals);
 
-                                                   //funções especiais e operações
+                                                   //To set functions and operations
         final Operacoes operacoes = new Operacoes();
         operacoes.setOperacao(0);
         operacoes.setContinua(0);
@@ -61,7 +61,7 @@ private static final String Tag = "Leituras";
                 String n = "0";
                 if(Objects.equals(number, ""))number=n;
                 int  dotCount, zeroCount=0;
-                                                //filtrando entrada de zeros
+                                                //zero filter
                 dotCount = operacoes.dotCounter(number);
                 zeroCount = operacoes.zeroCounter(number);
 
@@ -70,7 +70,7 @@ private static final String Tag = "Leituras";
                    // number = "";
                     number = number.concat(n);
                     saida = saida.concat(n);
-                                                //limitando o tamanho do numero
+                                                //digits limit
                     if ( number.length() > 11){
                         number = number.substring(0,11);
                         n=number;
@@ -78,7 +78,7 @@ private static final String Tag = "Leituras";
                 }else if(dotCount == 1) {
                     number = number.concat(n);
                     saida = saida.concat(n);
-                                                //limitando o tamanho do numero
+                                                //digits limit
                     if ( number.length() > 11){
                         number = number.substring(0,12);
                         Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
@@ -90,7 +90,7 @@ private static final String Tag = "Leituras";
 
                 }else if((!number.equals("0") & zeroCount != 0) & dotCount == 0){
                     number = number.concat("0");
-                                                 //limitando o tamanho do numero
+                                                 //digits limit
                     if ( number.length() > 11){
                         number = number.substring(0,11);
                         Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
@@ -121,7 +121,7 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                    //limitando o tamanho do numero
+                                                    //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
@@ -151,9 +151,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                    //limitando o tamanho do numero
+                                                          //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
+                                                            //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -182,10 +183,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                        //limitando o tamanho do numero
+                                                         //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                            //Toast de aviso de limite numerico
+                                                          //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -214,10 +215,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                    //limitando o tamanho do numero
+                                                     //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                                                         //Toast de aviso de limite numerico
+                                                         //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -245,10 +246,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                        //limitando o tamanho do numero
+                                                            //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                            //Toast de aviso de limite numerico
+                                                             //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -277,10 +278,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                    //limitando o tamanho do numero
+                                                     //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                                                    //Toast de aviso de limite numerico
+                                                     //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -309,10 +310,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                    //limitando o tamanho do numero
+                                                     //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                                                    //Toast de aviso de limite numerico
+                                                      //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -341,10 +342,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                                                 //limitando o tamanho do numero
+                                                             //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                                                //Toast de aviso de limite numerico
+                                                              //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -371,10 +372,10 @@ private static final String Tag = "Leituras";
 
                     }else{
                         number = number.concat(n);
-                        //limitando o tamanho do numero
+                                                          //digits limit
                         if ( number.length() > 11){
                             number = number.substring(0,11);
-                            //Toast de aviso de limite numerico
+                                                            //advise to digit limit (Toast)
                             Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                             avisoCenter.setGravity(Gravity.CENTER,0,0);
                             avisoCenter.show();
@@ -395,18 +396,18 @@ private static final String Tag = "Leituras";
             @Override
             public void onClick(View view) {
                       /*
-                       * deve conter apenas um ponto
-                      * recebe para teste a string na tela do user
+                       * it must have only one dot
+                      *
                       */
 
                     int dotCount,zeroCount;
                                                       //proibido pre cast
                                                       //number = txtRes.getText().toString();
-                                                      //contar quantas vezes "." aparece e filtrar
+                                                      //how many times "." will show and filter it
                 dotCount = operacoes.dotCounter(number);
                 zeroCount = operacoes.zeroCounter(number);
                     if(dotCount == 0){
-                                                     //adiciona ponto aos primeiros digitos
+                                                     //add a dot to first digit, just in case
                         if((zeroCount == 0) & (Objects.equals(number, ""))) {
                             number = number.concat("0.");
                             saida = saida.concat(number);
@@ -421,7 +422,7 @@ private static final String Tag = "Leituras";
                 txtRes.setText(saida);
             }
         });
-                                                  //AC apaga characteres ou reinicializa
+                                                  //AC restart
         btnAC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -429,7 +430,7 @@ private static final String Tag = "Leituras";
                 saida="";
                 txtRes.setText(number);
                 operacoes.setResult(0);
-               // operacoes.setParcela("0");
+                operacoes.setParcela("0");
                 operacoes.setAcumulador(0);
                 operacoes.setContinua(0);
                 operacoes.setOperacao(0);
@@ -440,39 +441,37 @@ private static final String Tag = "Leituras";
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                        //se a opcao eh SOMA apague outros sinais se houver
+                                        //if the option is ADD just erase others signals if there is 
                 if ( ( saida.endsWith("-") || saida.endsWith("x") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 1)){
                     saida = saida.substring(0, saida.length() - 1);
                     saida = saida.concat("+");
                      txtRes.setText(saida);
                 }
-                                        //é soma
+                                        //is add
                 operacoes.setOperacao(1);
-                                        //parcela
+                                        //portion
                 int continua = operacoes.getContinua();
-                                        //sucessivas operacoes
-                                        //seta tipo de operacao
+                                        // sequential operations
+                                        //set type of operation 
                 if(operacoes.getOperacao() == 5){
-
                     number = String.valueOf(operacoes.getAcumulador()) ;
                     operacoes.setResult(operacoes.getAcumulador());
                     saida =operacoes.showResult(operacoes.getParcela()) ;
                     saida=saida + "+";
                     txtRes.setText(saida);
                     operacoes.setOperacao(1);
-
                 }
-                                        //vide class operacoes
-                                        //flag Continua se vem da operação de igaldade ou click +
+                                        //see class operations
+                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
                 if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
                     operacoes.setParcela(number);
-                                        //primeira parcela
+                                        //first part
                     operacoes.setResult(operacoes.getParcela());
                     operacoes.setAcumulador(operacoes.getParcela());
                     operacoes.setContinua(continua+1);
 
                     saida =operacoes.showResult(operacoes.getParcela()) ;
-                                        //numeros negativos
+                                        //negative numbers
                     if(operacoes.getResult() < 0){
                         saida = ""+operacoes.getResult();
                         saida = "(" + saida + ")" + "+";
@@ -489,10 +488,10 @@ private static final String Tag = "Leituras";
 //                    Log.d(Tag,"Number = "+number);
 //                    Log.d(Tag,"parcela = "+operacoes.getParcela());
 //                    Log.d(Tag,"Operacao = "+operacoes.getOperacao());
-                                        //parcela 2 em diante
+                                        //portion 2 and so on
                     operacoes.setParcela(number);
                     operacoes.add();
-                                            //saida com muitos digitos
+                                            //output have a lot of digits
                     if (saida.length() > 9){
                         saida = "+"+operacoes.getResult();
                         txtRes.setText(saida);
@@ -513,22 +512,22 @@ private static final String Tag = "Leituras";
             }
         });
 
-        //{ A SUBTRAÇÃO
+          // A SUBTRAÇÃO
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                     //se a opcao eh subtrac apague outros sinais se houver
+                                                  //if the option is Sub just erase others signals if there is 
                 if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 2)){
                     saida = saida.substring(0, saida.length() - 1);
                     saida = saida.concat("-");
                     txtRes.setText(saida);
                 }
-                                    //é subtracao
+                                    //it is SUB
                 operacoes.setOperacao(2);
 
                 int continua = operacoes.getContinua();
-                                    //sucessivas operacoes
-                                    //vide class operacoes
+                                       // sequential operations
+                                        //set type of operation 
                 if(operacoes.getOperacao() == 5){
                     //number = "";
                     number = String.valueOf(operacoes.getAcumulador()) ;
@@ -538,10 +537,8 @@ private static final String Tag = "Leituras";
                     txtRes.setText(saida);
                     operacoes.setOperacao(2);
                 }
-
-
-                                            //vide class operacoes
-                                            //flag Continua se vem da operação de igaldade ou click +
+                                        //see class operations
+                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
                 if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
                     operacoes.setParcela(number);
                     operacoes.setResult(operacoes.getParcela());
@@ -549,7 +546,7 @@ private static final String Tag = "Leituras";
                     operacoes.setContinua(continua+1);
 
                     saida =operacoes.showResult(operacoes.getParcela()) ;
-                                            //numeros negativos
+                                             //negative numbers
                     if(operacoes.getResult() < 0){
                         saida = ""+operacoes.getResult();
                         saida = "(" + saida + ")" + "-";
@@ -561,7 +558,7 @@ private static final String Tag = "Leituras";
 
 
                 }else if (!number.equals("") && (operacoes.getOperacao() == 2)){
-
+//debug
 //Log.d(Tag,"Click sub = ");
 //Log.d(Tag,"Number = "+number);
 //Log.d(Tag,"parcela = "+operacoes.getParcela());
@@ -569,7 +566,7 @@ private static final String Tag = "Leituras";
 
                     operacoes.setParcela(number);
                     operacoes.subt();
-                                    //saida mais l;egivel
+                                    //output have a lot of digits
                     if (saida.length() > 9){
                         saida = "-"+operacoes.getResult();
                         txtRes.setText(saida);
@@ -594,24 +591,27 @@ private static final String Tag = "Leituras";
         btnMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                 //se a opcao eh multi apague outros sinais se houver
+                                 //if the option is Multi just erase others signals if there is 
                 if ( ( saida.endsWith("+") || saida.endsWith("-") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 3)){
                     saida = saida.substring(0, saida.length() - 1);
                     saida = saida.concat("x");
                     txtRes.setText(saida);
                 }
-                                            //vide class operacoes
+                                            
                 int continua = operacoes.getContinua();
                 if(operacoes.getOperacao() == 5){
                     number = "";
                     number = String.valueOf(operacoes.getAcumulador()) ;
                     operacoes.setResult(operacoes.getAcumulador());
-
+                    saida =operacoes.showResult(operacoes.getParcela()) ;
+                    saida=saida + "x";
+                    txtRes.setText(saida);
+                    operacoes.setOperacao(3);
                 }
+                                                //it is MULT
                 operacoes.setOperacao(3);
-
-                                            //vide class operacoes
-                                         //flag Continua se vem da operação de igaldade ou click +
+                                            //see class operations
+                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
                 if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
                      operacoes.setParcela(number);
                      operacoes.setAcumulador(1);
@@ -633,7 +633,7 @@ private static final String Tag = "Leituras";
                                             //pega result anterior e armazena na parcela
                     operacoes.setParcela(number);
                     operacoes.multi();
-                                            //saida mais legivel
+                                             //output have a lot of digits
                     if (saida.length() > 9){
                         saida = operacoes.getResult()+"x";
                         txtRes.setText(saida);
@@ -658,24 +658,28 @@ private static final String Tag = "Leituras";
 
             @Override
             public void onClick(View view) {
-                                        //se a opcao eh divisao apague outros sinais se houver
+                                       //if the option is DIV just erase others signals if there is 
                 if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("-") ) && (operacoes.getOperacao() != 4)){
                     saida = saida.substring(0, saida.length() - 1);
                     saida = saida.concat("÷");
                     txtRes.setText(saida);
                 }
+              
                 int continua = operacoes.getContinua();
-                                         //vide class operacoes
-
                 if(operacoes.getOperacao() == 5){
                     number = "";
                     number = String.valueOf(operacoes.getAcumulador()) ;
                     operacoes.setResult(operacoes.getAcumulador());
-
+                    saida =operacoes.showResult(operacoes.getParcela()) ;
+                    saida=saida + "÷";
+                    txtRes.setText(saida);
+                    operacoes.setOperacao(4);
                 }
+                                              //it is DIV
                 operacoes.setOperacao(4);
 
-                                       //seta parcela e inicializa atributo result
+                                       //see class operations
+                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
                 if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
                     operacoes.setParcela(number);
                     operacoes.setResult(operacoes.getParcela());
@@ -700,7 +704,7 @@ private static final String Tag = "Leituras";
                     operacoes.setParcela(number);
                     operacoes.divid();
                     operacoes.setContinua(continua+1);
-                    //saida mais legivel
+                                                        //output have a lot of digits
                     if (saida.length() > 9){
                         saida = operacoes.getResult()+"÷";
                         txtRes.setText(saida);
@@ -727,9 +731,7 @@ private static final String Tag = "Leituras";
         btnEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                                            //fornecido em cada função para o obj
-                                            //resultado deve ser gerado quando clicar no igual
+                                            //result must be generate when click on equals 
                 switch (operacoes.getOperacao()) {
                     case 0:
 
@@ -792,12 +794,12 @@ private static final String Tag = "Leituras";
 
                 }
 
-                                            //recebe valor final do obj
-                                            //converte para exibir
+                                            // final result of obj
+                                            //filter to show
                 saida = "= "+operacoes.showResult(operacoes.getResult());
                 txtRes.setText(saida);
-                                            //reiniciando
-                                            //guarda valor do resultado na parcela e zera result
+                                            //restart
+                                            //save the last result to next operation, just in case
                 if(number.equals("")){
                     operacoes.setOperacao(0);
                 }else{
