@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel" />
+        <device id="pixel_2" />
+        <target>android-24</target>
+      </config>
+    </shared>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="" />
+    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="LGK220AQ55VOCM" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5_API_27" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -20,8 +34,12 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Calculator" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1hAD783kpV9mN3zmowZGeEuYMa8" />
   <component name="ProjectViewState">
@@ -38,7 +56,7 @@
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Shell Script" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -149,5 +167,23 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1870" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
+    <state x="1600" y="948" width="1080" height="951" key="SettingsEditor" timestamp="1599560915637">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1600" y="948" width="1080" height="951" key="SettingsEditor/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599560915637" />
+    <state x="1600" y="935" width="1080" height="965" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1599739120371">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1600" y="935" width="1080" height="965" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739120371" />
+    <state x="1925" y="491" key="com.intellij.ide.util.TipDialog" timestamp="1599739076832">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="494" y="249" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@0.0.1600.900" timestamp="1599560438407" />
+    <state x="1925" y="491" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739076832" />
+    <state x="599" y="325" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495921306" />
+    <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599495864393">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495864393" />
   </component>
 </project>

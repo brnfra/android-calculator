@@ -17,11 +17,12 @@
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/txtRes"
-            android:layout_column="0"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="153dp"
+            android:layout_column="0"
 
             android:elegantTextHeight="false"
             android:foregroundTint="#FFFFFF"
@@ -38,7 +39,8 @@
             android:textColorHint="@android:color/secondary_text_dark"
             android:textSize="50sp"
             android:textStyle="bold"
-            app:autoSizeTextType="none" />
+            app:autoSizeTextType="none"
+            tools:ignore="RtlHardcoded" />
 
     </TableRow>
 
@@ -49,18 +51,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="140dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnAC"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="178dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:layout_weight="3"
+                android:layout_column="0"
                 android:layout_margin="1dp"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#09D8BC"
-                android:layout_column="0"
                 android:text="AC"
                 android:textSize="24sp" />
 
@@ -69,11 +72,12 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_column="1"
                 android:layout_margin="1dp"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#AEEA00"
                 android:text="÷"
-                android:layout_column="1"
                 android:textSize="24sp" />
 
             <Button
@@ -81,6 +85,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="@color/colorPrimary"
@@ -98,16 +103,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="140dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnSeven"
-                android:layout_column="0"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="140dp"
+                android:layout_column="0"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
                 android:text="7"
@@ -117,10 +123,11 @@
             <Button
                 android:id="@+id/btnEight"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_column="1"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
                 android:text="8"
@@ -130,10 +137,11 @@
             <Button
                 android:id="@+id/btnNine"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_column="2"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
                 android:text="9"
@@ -143,10 +151,11 @@
             <Button
                 android:id="@+id/btnSub"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_column="3"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#AEEA00"
                 android:text="-"
@@ -162,16 +171,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="140dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnFour"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="0"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="140dp"
+                android:layout_column="0"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
                 android:text="4"
@@ -181,10 +191,11 @@
             <Button
                 android:id="@+id/btnFive"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_column="1"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
                 android:text="5"
@@ -194,9 +205,10 @@
             <Button
                 android:id="@+id/btnSix"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_column="2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#304FFE"
@@ -208,9 +220,10 @@
                 android:id="@+id/btnAdd"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_column="3"
                 android:layout_height="match_parent"
+                android:layout_column="3"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#AEEA00"
                 android:text="+"
@@ -222,21 +235,23 @@
     <TableRow
         android:id="@+id/tbRow4"
         android:layout_width="match_parent"
-        android:layout_height="172dp">
+        android:layout_height="280dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="280dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="3"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="81dp"
+                    android:layout_height="140dp"
+
                     android:orientation="horizontal">
 
                     <Button
@@ -245,6 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="1"
@@ -257,6 +273,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="2"
@@ -269,6 +286,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="3"
@@ -279,16 +297,18 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="140dp"
+                    android:layout_weight="3"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnZero"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_column="0"
-                        android:layout_width="178dp"
-                        android:layout_height="69dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
                         android:layout_margin="1dp"
+                        android:layout_weight="2"
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="0"
@@ -298,10 +318,11 @@
                     <Button
                         android:id="@+id/btnDot"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_column="1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_column="1"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#A0CDF4"
                         android:text="."
@@ -313,9 +334,11 @@
             <Button
                 android:id="@+id/btnEquals"
                 style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+
+                android:layout_weight="1"
                 android:layout_column="2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#00C853"
