@@ -69,10 +69,12 @@ public class Operacoes {
         } catch (Throwable e) {
             e.printStackTrace();
                     //try -0xE
+            // TODO SHOW HEXADECIMAL FOR INPUT ERROR
             this.parcela = -999999;
         }
 
     }
+     // TODO ADD CLASSES AND INTERFACES TO OPERATIONS
      //ADD
     public void add(){
         double num1;

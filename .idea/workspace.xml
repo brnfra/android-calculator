@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,11 +177,11 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1600" y="935" width="1080" height="965" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739120371" />
-    <state x="1925" y="491" key="com.intellij.ide.util.TipDialog" timestamp="1599739076832">
+    <state x="1922" y="473" key="com.intellij.ide.util.TipDialog" timestamp="1600008067048">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="494" y="249" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@0.0.1600.900" timestamp="1599560438407" />
-    <state x="1925" y="491" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739076832" />
+    <state x="1922" y="473" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600008067048" />
     <state x="599" y="325" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495921306" />
     <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599495864393">
       <screen x="0" y="0" width="1920" height="1080" />

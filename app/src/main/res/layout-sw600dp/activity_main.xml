@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/txtRes"
             android:layout_width="match_parent"
-            android:layout_height="153dp"
+            android:layout_height="178dp"
             android:layout_column="0"
 
             android:elegantTextHeight="false"
@@ -57,11 +57,11 @@
             <Button
                 android:id="@+id/btnAC"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="140dp"
-                android:layout_weight="3"
                 android:layout_column="0"
                 android:layout_margin="1dp"
+                android:layout_weight="3"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#09D8BC"
                 android:text="AC"
@@ -124,7 +124,7 @@
                 android:id="@+id/btnEight"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="140dp"
                 android:layout_column="1"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
@@ -243,24 +243,24 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="450dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="140dp"
-
+                    android:layout_weight="3"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnOne"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
+                        android:layout_width="148dp"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:layout_weight="1"
+
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="1"
@@ -270,10 +270,10 @@
                     <Button
                         android:id="@+id/btnTwo"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
+                        android:layout_width="148dp"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:layout_weight="1"
+
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="2"
@@ -283,10 +283,10 @@
                     <Button
                         android:id="@+id/btnThree"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
+                        android:layout_width="147dp"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:layout_weight="1"
+
                         android:background="@color/colorPrimary"
                         android:backgroundTint="#304FFE"
                         android:text="3"
@@ -304,7 +304,7 @@
                     <Button
                         android:id="@+id/btnZero"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
+                        android:layout_width="298dp"
                         android:layout_height="match_parent"
                         android:layout_column="2"
                         android:layout_margin="1dp"
@@ -318,7 +318,7 @@
                     <Button
                         android:id="@+id/btnDot"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
+                        android:layout_width="147dp"
                         android:layout_height="match_parent"
                         android:layout_column="1"
                         android:layout_margin="1dp"
@@ -334,12 +334,12 @@
             <Button
                 android:id="@+id/btnEquals"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
+                android:layout_width="143dp"
                 android:layout_height="280dp"
 
-                android:layout_weight="1"
                 android:layout_column="2"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="#00C853"
                 android:text="="

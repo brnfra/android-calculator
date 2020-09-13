@@ -437,6 +437,7 @@ private static final String Tag = "Leituras";
             }
         });
 
+        // TODO ADD CLASSES AND INTERFACES TO OPERATIONS (MAIN)
         //A SOMA
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

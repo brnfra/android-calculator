@@ -52,6 +52,7 @@
             android:layout_height="80dp"
             android:orientation="horizontal">
             android:stretchColumns="*"
+            <!-- TODO BUTTON CLICK EFFECT-->
             <Button
                 android:id="@+id/btnAC"
                 style="@style/Widget.AppCompat.Button.Borderless"
