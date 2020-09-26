@@ -8,7 +8,6 @@ package com.brnfra.brnfrancocalc;
 
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,24 +29,24 @@ private static final String Tag = "Debug";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
                                                                      //objs
-        final TextView txtRes = (TextView) findViewById(R.id.txtRes);
-        Button btnZero = (Button) findViewById(R.id.btnZero);
-        Button btnOne = (Button) findViewById(R.id.btnOne);
-        Button btnTwo = (Button) findViewById(R.id.btnTwo);
-        Button btnThree = (Button) findViewById(R.id.btnThree);
-        Button btnFour = (Button) findViewById(R.id.btnFour);
-        Button btnFive = (Button) findViewById(R.id.btnFive);
-        Button btnSix = (Button) findViewById(R.id.btnSix);
-        Button btnSeven = (Button) findViewById(R.id.btnSeven);
-        Button btnEight = (Button) findViewById(R.id.btnEight);
-        Button btnNine = (Button) findViewById(R.id.btnNine);
-        Button btnDot = (Button) findViewById(R.id.btnDot);
-        Button btnAdd = (Button) findViewById(R.id.btnAdd);
-        Button btnSub = (Button) findViewById(R.id.btnSub);
-        Button btnMulti = (Button) findViewById(R.id.btnMulti);
-        Button btnDiv = (Button) findViewById(R.id.btnDiv);
-        Button btnAC = (Button) findViewById(R.id.btnAC);
-        Button btnEquals = (Button) findViewById(R.id.btnEquals);
+        final TextView txtRes =  findViewById(R.id.txtRes);
+        Button btnZero =  findViewById(R.id.btnZero);
+        Button btnOne =  findViewById(R.id.btnOne);
+        Button btnTwo =  findViewById(R.id.btnTwo);
+        Button btnThree =  findViewById(R.id.btnThree);
+        Button btnFour =  findViewById(R.id.btnFour);
+        Button btnFive =  findViewById(R.id.btnFive);
+        Button btnSix =  findViewById(R.id.btnSix);
+        Button btnSeven =  findViewById(R.id.btnSeven);
+        Button btnEight =  findViewById(R.id.btnEight);
+        Button btnNine =  findViewById(R.id.btnNine);
+        Button btnDot =  findViewById(R.id.btnDot);
+        Button btnAdd =  findViewById(R.id.btnAdd);
+        Button btnSub =  findViewById(R.id.btnSub);
+        Button btnMulti =  findViewById(R.id.btnMulti);
+        Button btnDiv =  findViewById(R.id.btnDiv);
+        Button btnAC =  findViewById(R.id.btnAC);
+        Button btnEquals =  findViewById(R.id.btnEquals);
 
                                                    //To set functions and operations
         Operations operations = new Operations();
@@ -78,181 +77,149 @@ private static final String Tag = "Debug";
             txtRes.setText(saida);
 
         });
-        btnOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '1';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnOne.setOnClickListener(view -> {
+            Character n = '1';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '2';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnTwo.setOnClickListener(view -> {
+            Character n = '2';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '3';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnThree.setOnClickListener(view -> {
+            Character n = '3';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '4';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnFour.setOnClickListener(view -> {
+            Character n = '4';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnFive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '5';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnFive.setOnClickListener(view -> {
+            Character n = '5';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnSix.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '6';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnSix.setOnClickListener(view -> {
+            Character n = '6';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnSeven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '7';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnSeven.setOnClickListener(view -> {
+            Character n = '7';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnEight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '8';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnEight.setOnClickListener(view -> {
+            Character n = '8';
+            dig.passDigit(n);
+            saida = number.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
+            txtRes.setText(saida);
         });
-        btnNine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character n = '9';
-                dig.passDigit(n);
-                saida = dig.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+        btnNine.setOnClickListener(view -> {
+            Character n = '9';
+            dig.passDigit(n);
+            saida = dig.getNumber();
+            //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
             }
-
-
+            txtRes.setText(saida);
         });
         //DOT
-         btnDot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+         btnDot.setOnClickListener(view -> {
 
-                Character n = '.';
-                dig.passDigit(n);
-                saida = number.getNumber();
-                //digits limit
-                if ( saida.length() >= 10){
-                    saida = saida.substring(0,10);
-                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                    avisoCenter.setGravity(Gravity.CENTER,0,0);
-                    avisoCenter.show();
+             Character n = '.';
+             dig.passDigit(n);
+             saida = number.getNumber();
+             //digits limit
+             if ( saida.length() >= 10){
+                 saida = saida.substring(0,10);
+                 Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                 avisoCenter.setGravity(Gravity.CENTER,0,0);
+                 avisoCenter.show();
 
-                }
-                txtRes.setText(saida);
-            }
-        });
-        //AC restart
+             }
+             txtRes.setText(saida);
+         });
+        //AC RESET
         btnAC.setOnClickListener(view -> {
             make.setParcela("0");
             make.setAcumulador(0.0);
@@ -271,7 +238,7 @@ private static final String Tag = "Debug";
             txtRes.setText(number.getNumber());
 
         });
-        //A SOMA
+        //THE ADD
         btnAdd.setOnClickListener(view -> {
                                     //if the option is ADD just erase others signals if there is
             if ( ( saida.endsWith("-") || saida.endsWith("x") || saida.endsWith("÷") ) && (operations.getOperacao() != 1)){
@@ -288,7 +255,7 @@ private static final String Tag = "Debug";
 
         });
 
-          // A SUBTRAÇÃO
+        // THE SUBTRACT
         btnSub.setOnClickListener(view -> {
                                               //if the option is Sub just erase others signals if there is
             if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("÷") ) && (operations.getOperacao() != 2)){
@@ -304,7 +271,7 @@ private static final String Tag = "Debug";
 
         });
 
-        //A MULTIPLICAÇÃO
+        //THE MULTIPLY
         btnMulti.setOnClickListener(view -> {
                              //if the option is Multi just erase others signals if there is
             if ( ( saida.endsWith("+") || saida.endsWith("-") || saida.endsWith("÷") ) && (operations.getOperacao() != 3)){
@@ -321,7 +288,7 @@ private static final String Tag = "Debug";
 
         });
 
-        //A DIVISÃO
+        //THE DIVISION
         btnDiv.setOnClickListener(view -> {
                                    //if the option is DIV just erase others signals if there is
             if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("-") ) && (operations.getOperacao() != 4)){
@@ -337,7 +304,7 @@ private static final String Tag = "Debug";
 
         });
 
-        //Equals
+        //EQUALS AND RESULTS
         btnEquals.setOnClickListener(view -> {
                                         //result must be generate when click on equals
                                         //final result of obj

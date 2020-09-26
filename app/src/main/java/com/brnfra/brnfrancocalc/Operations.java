@@ -6,8 +6,6 @@ package com.brnfra.brnfrancocalc;
 */
 import java.util.Objects;
 
-import static java.lang.Math.abs;
-
 public class Operations implements Operating {
     private double result, parcela, acumulador;
     private int operacao, continua;
