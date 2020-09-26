@@ -14,7 +14,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="Update readme and main.java. Major alter Add Unit tests and separate on classes.">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operating.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidBtnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidBtnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +85,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Shell Script" />
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android JUnit.AndroidBtnTest">
     <configuration name="AndroidBtnTest" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
@@ -223,6 +237,17 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update readme and main.java" />
@@ -242,10 +267,10 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1867" y="189" width="530" height="475" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600789448860" />
-    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1601044765132">
+    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1601155270005">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601044765132" />
+    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601155270005" />
     <state x="1945" y="643" width="380" height="553" key="#com.intellij.ide.util.MemberChooser" timestamp="1600799093342">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
@@ -275,25 +300,25 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601087884289" />
-    <state width="1030" height="344" key="GridCell.Tab.0.bottom" timestamp="1601144025290">
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom" timestamp="1601159075399">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="344" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
     <state width="1870" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="344" key="GridCell.Tab.0.center" timestamp="1601144025290">
+    <state width="1030" height="281" key="GridCell.Tab.0.center" timestamp="1601159075399">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="344" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
+    <state width="1030" height="281" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
     <state width="1870" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="344" key="GridCell.Tab.0.left" timestamp="1601144025290">
+    <state width="1030" height="281" key="GridCell.Tab.0.left" timestamp="1601159075399">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="344" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
+    <state width="1030" height="281" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
     <state width="1870" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="344" key="GridCell.Tab.0.right" timestamp="1601144025290">
+    <state width="1030" height="281" key="GridCell.Tab.0.right" timestamp="1601159075399">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="344" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
+    <state width="1030" height="281" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
     <state width="1870" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
     <state x="1600" y="948" width="1080" height="951" key="SettingsEditor" timestamp="1599560915637">
       <screen x="1600" y="0" width="1080" height="1920" />

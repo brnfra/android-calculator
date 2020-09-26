@@ -4,8 +4,6 @@ package com.brnfra.brnfrancocalc;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Objects;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -31,6 +29,25 @@ public class AndroidBtnTest {
         this.dig=number;
         this.out=res;
         this.op=make;
+    }
+
+    public void reset(){
+        make.setParcela("0");
+        make.setAcumulador(0.0);
+        make.setContinua(0);
+        make.setOperacao(0);
+        dig.reset(number);
+        make.add(number);
+        make.subt(number);
+        make.multi(number);
+        make.divid(number);
+        make.setParcela("0");
+        make.setAcumulador(0.0);
+        make.setContinua(0);
+        make.setOperacao(0);
+        dig.reset(number);
+        make.setResult(0.0);
+        make.setEquals(number);
     }
 
     @Test
@@ -89,34 +106,48 @@ public class AndroidBtnTest {
         assertEquals("9.88e+10", out.formatOut(98765432167.56) );
         number.setNumber("987654321678");
         assertEquals("9.88e+11", out.formatOut(987654321678.0) );
-
     }
 
     @Test
     public void addTest(){
         dig.passDigit('1');
         dig.passDigit('0');
+        dig.passDigit('.');
         dig.passDigit('3');
         op.add(number);
         dig.passDigit('0');
         dig.passDigit('1');
         dig.passDigit('3');
         op.add(number);
-        assertEquals("116",out.formatOut(make.getResult()));
+        assertEquals("23.3",out.formatOut(make.getResult()));
+        reset();
+        dig.reset(number);
+        dig.setNumber("10");
+        op.add(number);
+        dig.setNumber("32");
+        make.setEquals(number);
+        assertEquals("42",out.formatOut(make.getResult()));
     }
 
     @Test
     public void subtTest(){
-        dig.passDigit('1');
-        dig.passDigit('0');
-        dig.passDigit('3');
+        dig.setNumber("103");
         op.subt(number);
         dig.passDigit('0');
         dig.passDigit('0');
         dig.passDigit('3');
         op.subt(number);
-        assertEquals(100.0,op.getResult(),0.000001);
-
+        dig.setNumber("103");
+        op.subt(number);
+        assertEquals(-3.0,op.getResult(),0.00001);
+        reset();
+        dig.reset(number);
+        dig.setNumber("50");
+        op.subt(number);
+        assertEquals("50",out.formatOut(make.getResult()));
+        dig.setNumber("32");
+        make.setEquals(number);
+        //assertEquals("18",out.formatOut(make.getResult()));
     }
     @Test
     public void multiTest(){
@@ -125,15 +156,24 @@ public class AndroidBtnTest {
         dig.passDigit('0');
         dig.passDigit('3');
         op.multi(number);
+        assertEquals("103",out.formatOut(make.getResult()));
         dig.passDigit('0');
         dig.passDigit('0');
         dig.passDigit('3');
         op.multi(number);
-        assertEquals(309.0,op.getResult(),0.000001);
+        assertEquals(309.0,op.getResult(),0.00001);
+        reset();
+        dig.reset(number);
+        dig.setNumber("10");
+        op.multi(number);
+        dig.setNumber("32");
+        make.setEquals(number);
+        assertEquals("320",out.formatOut(make.getResult()));
 
     }
     @Test
     public void dividTest(){
+
         dig.passDigit('0');
         dig.passDigit('9');
         dig.passDigit('9');
@@ -142,13 +182,19 @@ public class AndroidBtnTest {
         dig.passDigit('0');
         dig.passDigit('3');
         op.divid(number);
-        assertEquals(33.0, op.getResult(), 0.000001);
-
+        assertEquals(33.0, op.getResult(), 0.00001);
+        reset();
+        dig.reset(number);
+        dig.setNumber("32");
+        op.divid(number);
+        dig.setNumber("10");
+        make.setEquals(number);
+        assertEquals("3.2",out.formatOut(make.getResult()));
     }
     
     @Test
     public void equalsTest(){
-
+//TODO make test equals value saved to next operation
         dig.passDigit('1');         //1
         op.add(number);                //1  +
         dig.passDigit('3');         //1  +  3
@@ -160,29 +206,12 @@ public class AndroidBtnTest {
         dig.passDigit('2');         //6  *  2
         op.divid(number);              //6  /  2
         assertEquals("3",out.formatOut(make.getResult()));
-        if(make.getResult() == 0.0){
-            make.setOperacao(0);
-            //make.setResult(dig.getDoubleOfNumber());
-
-        }else{
-           // make.setParcela(String.valueOf(make.getResult()));
-            number.setNumber(String.valueOf(make.getResult()));
-            make.setAcumulador(make.getResult());
-            //make.setOperacao(5);
-            make.setResult(dig.getDoubleOfNumber());
-            assertEquals("1",out.formatOut(make.getResult()));
-        }
-        number.setNumber(String.valueOf(make.getResult()));
         make.setAcumulador(make.getResult());
-        op.add(number);//2
+        assertEquals(3.0,make.getAcumulador(),0.0001);
+        dig.setNumber(String.valueOf(make.getResult()));
+        assertEquals("3.0",dig.getNumber());
 
-        number.setNumber(String.valueOf(make.getResult()));
-        make.setAcumulador(make.getResult());
-        op.multi(number);//4
-        //make.setResult(dig.getDoubleOfNumber());
-        assertEquals("4",out.formatOut(make.getResult()));
 
-      //  make.setResult(dig.getDoubleOfNumber());
 
     }
 
@@ -205,7 +234,14 @@ public class AndroidBtnTest {
         make.subt(number);
         make.multi(number);
         make.divid(number);
+        make.setParcela("0");
+        make.setAcumulador(0.0);
+        make.setContinua(0);
+        make.setOperacao(0);
+        make.setEquals(number);
+        make.setResult(0.0);
         assertEquals("0",out.formatOut(make.getResult()));
     }
+
 
 }

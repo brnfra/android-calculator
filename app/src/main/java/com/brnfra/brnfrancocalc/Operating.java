@@ -9,7 +9,7 @@ public interface Operating {
      void setContinua(int continua);
      void setOperacao(int operacao);
      double getResult();
-     void setResult(double result);
+     void setEquals(Inputs number);
      void setAcumulador(double acumulador);
      void setParcela(String parcela);
 

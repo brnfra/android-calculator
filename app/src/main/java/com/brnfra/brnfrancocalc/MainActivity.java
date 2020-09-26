@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Objects;
-
 public class MainActivity extends AppCompatActivity {
 
 //String number="";
@@ -221,7 +219,7 @@ private static final String Tag = "Debug";
             public void onClick(View view) {
                 Character n = '9';
                 dig.passDigit(n);
-                saida = number.getNumber();
+                saida = dig.getNumber();
                 //digits limit
                 if ( saida.length() >= 10){
                     saida = saida.substring(0,10);
@@ -265,13 +263,14 @@ private static final String Tag = "Debug";
             make.subt(number);
             make.multi(number);
             make.divid(number);
-            saida="";
+            make.setParcela("0");
+            make.setAcumulador(0.0);
+            make.setContinua(0);
+            make.setOperacao(0);
+            make.setEquals(number);
             txtRes.setText(number.getNumber());
-            //make.setResult(0.0);
 
         });
-
-
         //A SOMA
         btnAdd.setOnClickListener(view -> {
                                     //if the option is ADD just erase others signals if there is
@@ -285,68 +284,7 @@ private static final String Tag = "Debug";
             saida = out.formatOut(make.getResult()) ;
             saida=saida + "+";
             txtRes.setText(saida);
-            /*
-                                    //is add
-            functions.setOperacao(1);
-                                    //portion
-            int continua = functions.getContinua();
-                                    // sequential operations
-                                    //set type of operation
-            if(functions.getOperacao() == 5){
-                number.setNumber(String.valueOf(functions.getAcumulador()));
-                functions.setResult(functions.getAcumulador());
 
-                txtRes.setText(saida);
-                functions.setOperacao(1);
-            }
-                                    //see class operations
-                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
-            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
-                functions.setParcela(number.getNumber());
-                                    //first part
-                functions.setResult(functions.getParcela());
-                functions.setAcumulador(functions.getParcela());
-                functions.setContinua(continua+1);
-
-                saida =out.formatOut(functions.getParcela()) ;
-                                    //negative numbers
-                if(functions.getResult() < 0){
-                    saida = ""+ functions.getResult();
-                    saida = "(" + saida + ")" + "+";
-                    txtRes.setText(saida);
-
-                }else {
-                    saida = saida.concat("+");
-                    txtRes.setText(saida);
-
-                }
-
-            }else if ((!Objects.equals(number.getNumber(),"")) && (functions.getOperacao() == 1)){
-//                    Log.d(Tag,"Click soma = ");
-//                    Log.d(Tag,"Number = "+number);
-//                    Log.d(Tag,"parcela = "+operacoes.getParcela());
-//                    Log.d(Tag,"Operacao = "+operacoes.getOperacao());
-                                    //portion 2 and so on
-                functions.setParcela(number.getNumber());
-                functions.add();
-                                        //output have a lot of digits
-                if (saida.length() > 9){
-                    saida = "+"+ functions.getResult();
-                    txtRes.setText(saida);
-                }else{
-                    if(functions.getResult() < 0){
-                        saida = ""+ functions.getResult();
-                        saida = "(" + saida + ")" + "+";
-                        txtRes.setText(saida);
-                    }else {
-                        saida = saida.concat("+");
-                        txtRes.setText(saida);
-                    }
-                }
-                functions.setContinua(continua+1);
-            }
-            number.setNumber("");
-            functions.setParcela("0");*/
 
         });
 
@@ -363,71 +301,6 @@ private static final String Tag = "Debug";
             saida = out.formatOut(make.getResult()) ;
             saida=saida + "-";
             txtRes.setText(saida);
-            /*
-                                //it is SUB
-            functions.setOperacao(2);
-
-            int continua = functions.getContinua();
-                                   // sequential operations
-                                    //set type of operation
-            if(functions.getOperacao() == 5){
-                //number.setNumber("");
-                number.setNumber(String.valueOf(functions.getAcumulador()));
-                functions.setResult(functions.getAcumulador());
-                saida =out.formatOut(functions.getParcela()) ;
-                saida=saida + "-";
-                txtRes.setText(saida);
-                functions.setOperacao(2);
-            }
-                                    //see class operations
-                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
-            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
-                functions.setParcela(number.getNumber());
-                functions.setResult(functions.getParcela());
-                functions.setAcumulador(functions.getParcela());
-                functions.setContinua(continua+1);
-
-                saida =out.formatOut(functions.getParcela()) ;
-                                         //negative numbers
-                if(functions.getResult() < 0){
-                    saida = ""+ functions.getResult();
-                    saida = "(" + saida + ")" + "-";
-                    txtRes.setText(saida);
-                }else {
-                    saida = saida.concat("-");
-                    txtRes.setText(saida);
-                }
-
-            }else if (!Objects.equals(number.getNumber(),"") && (functions.getOperacao() == 2)){
-//debug
-//Log.d(Tag,"Click sub = ");
-//Log.d(Tag,"Number = "+number);
-//Log.d(Tag,"parcela = "+operacoes.getParcela());
-//Log.d(Tag,"Operacao = "+operacoes.getOperacao());
-
-                functions.setParcela(number.getNumber());
-                functions.subt();
-                                //output have a lot of digits
-                if (saida.length() > 9){
-                    saida = "-"+ functions.getResult();
-                    txtRes.setText(saida);
-                }else{
-                    if(functions.getResult() < 0){
-                        saida = ""+ functions.getResult();
-                        saida = "(" + saida + ")" + "-";
-                        txtRes.setText(saida);
-                    }else {
-                        saida = saida.concat("-");
-                        txtRes.setText(saida);
-                    }
-                }
-                functions.setContinua(continua+1);
-            }
-            number.setNumber("");
-            functions.setParcela("0");
-
-            */
-
 
         });
 
@@ -444,61 +317,7 @@ private static final String Tag = "Debug";
             saida = out.formatOut(make.getResult()) ;
             saida=saida + "x";
             txtRes.setText(saida);
-            /*
-            int continua = functions.getContinua();
-            if(functions.getOperacao() == 5){
-                number.setNumber("");
-                number.setNumber(String.valueOf(functions.getAcumulador()));
-                functions.setResult(functions.getAcumulador());
-                saida =out.formatOut(functions.getParcela()) ;
-                saida=saida + "x";
-                txtRes.setText(saida);
-                functions.setOperacao(3);
-            }
-                                            //it is MULT
-            functions.setOperacao(3);
-                                        //see class operations
-                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
-            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
-                 functions.setParcela(number.getNumber());
-                 functions.setAcumulador(1);
-                 functions.setResult(1);
-                 functions.multi();
-                 functions.setContinua(continua+1);
-                 saida =out.formatOut(functions.getParcela()) ;
 
-                if(functions.getResult() < 0){
-                    saida = ""+ functions.getResult();
-                    saida = "(" + saida + ")" + "x";
-                    txtRes.setText(saida);
-                }else {
-                    saida = saida.concat("x");
-                    txtRes.setText(saida);
-                }
-
-            }else if (!Objects.equals(number.getNumber(), "")){
-                                        //pega result anterior e armazena na parcela
-                functions.setParcela(number.getNumber());
-                functions.multi();
-                                         //output have a lot of digits
-                if (saida.length() > 9){
-                    saida = functions.getResult()+"x";
-                    txtRes.setText(saida);
-                }else{
-
-                    if(functions.getResult() < 0){
-                        saida = ""+ functions.getResult();
-                        saida = "(" + saida + ")" + "x";
-                        txtRes.setText(saida);
-                    }else {
-                        saida = saida.concat("x");
-                        txtRes.setText(saida);
-                    }
-                }
-            }
-            number.setNumber("");
-            functions.setParcela("0");
-            */
 
         });
 
@@ -515,67 +334,6 @@ private static final String Tag = "Debug";
             saida = out.formatOut(make.getResult()) ;
             saida=saida + "÷";
             txtRes.setText(saida);
-            /*
-            int continua = functions.getContinua();
-            if(functions.getOperacao() == 5){
-                number.setNumber("");
-                number.setNumber(String.valueOf(functions.getAcumulador()));
-                functions.setResult(functions.getAcumulador());
-                saida =out.formatOut(functions.getParcela()) ;
-                saida=saida + "÷";
-                txtRes.setText(saida);
-                functions.setOperacao(4);
-            }
-                                          //it is DIV
-            functions.setOperacao(4);
-
-                                   //see class operations
-                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
-            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
-                functions.setParcela(number.getNumber());
-                functions.setResult(functions.getParcela());
-                functions.setAcumulador(functions.getParcela());
-                functions.setContinua(continua+1);
-                saida =out.formatOut(functions.getParcela()) ;
-
-                if(functions.getResult() < 0){
-
-                    saida = ""+ functions.getResult();
-                    saida = "(" + saida + ")" + "÷";
-                    txtRes.setText(saida);
-
-                }else {
-                   saida = saida.concat("÷");
-                    txtRes.setText(saida);
-
-                }
-
-            }else if (!Objects.equals(number.getNumber(), "")){
-
-                functions.setParcela(number.getNumber());
-                functions.divid();
-                functions.setContinua(continua+1);
-                                                    //output have a lot of digits
-                if (saida.length() > 9){
-                    saida = functions.getResult()+"÷";
-                    txtRes.setText(saida);
-
-                }else{
-
-                    if(functions.getResult() < 0){
-                        saida = ""+ functions.getResult();
-                        saida = "(" + saida + ")" + "÷";
-                        txtRes.setText(saida);
-
-                    }else {
-                        saida = saida.concat("÷");
-                        txtRes.setText(saida);
-                    }
-                }
-            }
-            number.setNumber("");
-            functions.setParcela("0");
-            */
 
         });
 
@@ -585,30 +343,14 @@ private static final String Tag = "Debug";
                                         //final result of obj
                                         //filter to show
                                         //number != empty
-
-            saida = "= " + out.formatOut(make.getResult());
-            txtRes.setText(saida);
                                         //restart
                                         //save the last result to next operation, just in case
-            if(Objects.equals(out.formatOut(make.getResult()), "0")){
-                make.setOperacao(0);
-                //make.setResult(dig.getDoubleOfNumber());
-
-            }else{
-                dig.setNumber(String.valueOf(make.getResult()));
-               // make.setParcela(String.valueOf(make.getResult()));
-                make.setAcumulador(make.getResult());
-                //make.setOperacao(5);
-                make.setResult(dig.getDoubleOfNumber());
-
-                saida ="= " + out.formatOut(make.getResult()) ;
-
-                txtRes.setText(saida);
-            }
-
+            make.setEquals(number);
+            make.setAcumulador(make.getResult());
+             saida ="= " + out.formatOut(make.getResult()) ;
+              txtRes.setText(saida);
             dig.reset(number);
             saida="";
-            make.setResult(0);
 
         });
 

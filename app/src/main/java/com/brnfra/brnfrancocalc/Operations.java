@@ -47,85 +47,10 @@ public class Operations implements Operating {
     public double getResult() {
         return result;
     }
-    public void setResult(double result) {
-        double partial=getParcela();
-        if(operacao == 0 || operacao == 5){
-            this.result = partial;
-        }
-        switch (getOperacao()) {
-            case 0:
-                setOperacao(0);
-                setContinua(0);
-                break;
-            case 1:
-                if (getContinua() >= 2) {
-                    this.result =  this.acumulador + result;
-                    setContinua(2);
-
-                } else {
-                   this.result =  this.acumulador + result;
-                    setContinua(0);
-                }
-
-                break;
-            case 2:
-                if (getContinua() >= 2) {
-                    this.result = this.acumulador - result;
-                    setContinua(2);
-
-                } else {
-                    this.result = this.acumulador - result;
-                    setContinua(0);
-                }
-                break;
-            case 3:
-                if (getContinua() >= 2) {
-                   // parcela = result;
-                    //Parcela saved
-                    this.result = this.result*result ;
-                    this.acumulador = this.acumulador*result;
-                    setContinua(2);
-
-                } else {
-                   // parcela = result;
-                    //Parcela saved
-                    this.result = this.result*result;
-                    this.acumulador = this.acumulador*result;
-                    setContinua(0);
-                }
-
-                break;
-            case 4:
-                if (getContinua() >= 2) {
-                  //  parcela = result;
-                    try {
-                        //div por zero
-                        this.result = this.result / result;
-                        this.acumulador = this.acumulador / result ;
-                    }catch (Throwable e){
-                        this.result = 0;
-                    }
-                    setContinua(2);
-
-                } else {
-                   // parcela = result;
-                    try {
-                        //div por zero
-                        this.result = this.result / result;
-                        this.acumulador = this.acumulador / result ;
-                    }catch (Throwable e){
-                        this.result = 0;
-                    }
-                    setContinua(0);
-                }
-                break;
-
-
-        }
-
-
+    public void setResult(Double value){
+        this.result = value;
     }
-                                                //Part
+                                                   //Part
     public double getParcela() {
         return parcela;
     }
@@ -144,20 +69,22 @@ public class Operations implements Operating {
         }
 
     }
-
+    //ADD
     public void add(Inputs number){
                                         //is add
-        setOperacao(1);
+
                                 //portion
         int continua = getContinua();
                                 // sequential operations
                                 //set type of operation
-        //TODO LOGIC PROBLEM HERE TO RESOLVE
-        if(getContinua() >= 2){
-            number.setNumber(String.valueOf(getAcumulador()));
-            setResult(getAcumulador());
+
+        if(getOperacao() == 5){
+           /* number.setNumber(String.valueOf(getAcumulador()));*/
+            setEquals(number);
             setOperacao(1);
+            return;
         }
+        setOperacao(1);
                                 //see class operations
         //flag Continue after click +(se vem da operação de igaldade ou click +)
         if( (getContinua() == 0) && (!Objects.equals(number.getNumber(), ""))) {
@@ -167,10 +94,10 @@ public class Operations implements Operating {
             setAcumulador(getParcela());
             setContinua(continua+1);
             this.result = getParcela();
-        }else if ((!Objects.equals(number.getNumber(),"")) && (getOperacao() >= 1)){
+        }else if ((!Objects.equals(number.getNumber(),"")) && (getContinua() > 0)){
             setParcela(number.getNumber());
                                      //Parcela saved
-            this.result += getParcela();
+            this.result += parcela;
             this.acumulador = this.result;
             setContinua(continua+1);
         }
@@ -179,29 +106,26 @@ public class Operations implements Operating {
     }
      //SUB
     public void subt(Inputs number){
-
-                        //it is SUB
-
                             // sequential operations
                             //set type of operation
         if(getOperacao() == 5){
             number.setNumber(String.valueOf(getAcumulador()));
-            setResult(getAcumulador());
+          //  setResult(getAcumulador());
             setOperacao(2);
         }
         setOperacao(2);
         int continua = getContinua();
         //see class operations
         //flag Continue after click +(se vem da operação de igaldade ou click +)
-        if( (getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
+        if( (continua == 0) ) {
             setParcela(number.getNumber());
-           // setResult(getParcela());
+            setResult(getParcela());
             setAcumulador(getParcela());
             setContinua(continua+1);
-
-        }else if (!Objects.equals(number.getNumber(),"") && (getOperacao() == 2)){
+           // this.result = getParcela();
+        }else {
             setParcela(number.getNumber());
-            this.result = this.acumulador  - getParcela();
+            this.result = this.acumulador  - parcela;
            // this.result = this.result - getParcela();
             this.acumulador = this.result ;
 
@@ -218,7 +142,7 @@ public class Operations implements Operating {
         if(getOperacao() == 5){
             number.reset(number);
             number.setNumber(String.valueOf(getAcumulador()));
-            setResult(getAcumulador());
+           // setResult(getAcumulador());
             setOperacao(3);
         }
         //it is MULT
@@ -244,11 +168,12 @@ public class Operations implements Operating {
     //DIVID
     public void divid(Inputs number){
         int continua = getContinua();
+
         if(getOperacao() == 5){
-            number.reset(number);
-            number.setNumber(String.valueOf(getAcumulador()));
-            this.result = getAcumulador();
+            /* number.setNumber(String.valueOf(getAcumulador()));*/
+            setEquals(number);
             setOperacao(4);
+            return;
         }
         //it is DIV
         setOperacao(4);
@@ -276,7 +201,34 @@ public class Operations implements Operating {
         number.reset(number);
         setParcela("0");
     }
+    //EQUALS
+    public void setEquals(Inputs number) {
 
+        switch (getOperacao()) {
+            case 0:
+                setOperacao(0);
+
+                break;
+            case 1:
+
+                add(number);
+                setContinua(0);
+                break;
+            case 2:
+
+                subt(number);
+                setContinua(0);
+                break;
+            case 3:
+
+                multi(number);
+                break;
+            case 4:
+
+                divid(number);
+                break;
+        }
+    }
 }
 //                    Log.d(Tag,"Click soma = ");
 //                    Log.d(Tag,"Number = "+number);
