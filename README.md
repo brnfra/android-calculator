@@ -3,9 +3,10 @@
 A simple exercise to build a calculator in Java to Android system.
 On MIT License without any warranties!
 
-### Todo
+### TODO
 
-- [ ] Organize the classes
+- [x] Make auto tests
+- [x] Organize the classes
 - [ ] Accessibility
 - [ ] Implement expressions by operations()
 - [ ] +/- Button

@@ -1,13 +1,12 @@
 package com.brnfra.brnfrancocalc;
 /*
 * Author: Bruno do Nascimento Franco
-* RU 2575362
+*
 * A simple App to calc; Realize only four basic operations( + - x ÷ ) 
 *
 */
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -20,10 +19,14 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-String number="";
+//String number="";
+
 String saida="";
-                                            //Tag to debug
-private static final String Tag = "Leituras";
+Digit dig;
+Operating make;
+Outputing out;
+                                      //Tag to debug
+private static final String Tag = "Debug";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,344 +52,185 @@ private static final String Tag = "Leituras";
         Button btnEquals = (Button) findViewById(R.id.btnEquals);
 
                                                    //To set functions and operations
-        final Operacoes operacoes = new Operacoes();
-        operacoes.setOperacao(0);
-        operacoes.setContinua(0);
+        Operations operations = new Operations();
+        Inputs number = new Inputs();
+        Outputs res = new Outputs();
 
-                                           //listeners
-        btnZero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        operations.setOperacao(0);
+        operations.setContinua(0);
+        //Inputs num = new Inputs();
+        number.setNumber("0");
+        dig = number  ;
+        out = res;
+        make = operations;
 
-                String n = "0";
-                if(Objects.equals(number, ""))number=n;
-                int  dotCount, zeroCount=0;
-                                                //zero filter
-                dotCount = operacoes.dotCounter(number);
-                zeroCount = operacoes.zeroCounter(number);
-
-
-                if( dotCount == 0 && zeroCount == 0){
-                   // number = "";
-                    number = number.concat(n);
-                    saida = saida.concat(n);
-                                                //digits limit
-                    if ( number.length() > 11){
-                        number = number.substring(0,11);
-                        n=number;
-                    }
-                }else if(dotCount == 1) {
-                    number = number.concat(n);
-                    saida = saida.concat(n);
-                                                //digits limit
-                    if ( number.length() > 11){
-                        number = number.substring(0,12);
-                        Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                        avisoCenter.setGravity(Gravity.CENTER,0,0);
-                        avisoCenter.show();
-                        n=number;
-                    }
-
-
-                }else if((!number.equals("0") & zeroCount != 0) & dotCount == 0){
-                    number = number.concat("0");
-                                                 //digits limit
-                    if ( number.length() > 11){
-                        number = number.substring(0,11);
-                        Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                        avisoCenter.setGravity(Gravity.CENTER,0,0);
-                        avisoCenter.show();
-                        n=number;
-                    }
-
-                    saida = saida.concat(n);
-                }
-
-                //0
-
-                txtRes.setText(saida);
+                                            //listeners 0-9
+        btnZero.setOnClickListener(view -> {
+            Character n = '0';
+            dig.passDigit(n);
+            saida = number.getNumber();
+                                     //digits limit
+            if ( saida.length() >= 10){
+                saida = saida.substring(0,10);
+                Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                avisoCenter.setGravity(Gravity.CENTER,0,0);
+                avisoCenter.show();
 
             }
+            txtRes.setText(saida);
+
         });
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String n = "1";
-                if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                    //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '1';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //1
-                saida = saida.concat(n);
                 txtRes.setText(saida);
             }
         });
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "2";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                          //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                            //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '2';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //2
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "3";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                         //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                          //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '3';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //3
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "4";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                     //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                         //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '4';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                 //4
-                saida = saida.concat(n);
                 txtRes.setText(saida);
             }
         });
         btnFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "5";
-                if (operacoes.getParcela() == 0 & operacoes.getOperacao() != 0 & Objects.equals(number, "") ){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                            //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                             //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '5';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //5
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "6";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                     //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                     //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '6';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //6
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "7";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(Objects.equals(number, "")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                     //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                      //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '7';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //7
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String n = "8";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-
-                }else{
-                    if(number.equals("")){
-                        number=n;
-
-                    }else{
-                        number = number.concat(n);
-                                                             //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                              //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-                    }
+                Character n = '8';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
                 }
-                //8
-                saida = saida.concat(n);
                 txtRes.setText(saida);
-
             }
         });
         btnNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String n = "9";
-                 if (operacoes.getContinua() == 0 & operacoes.getOperacao() != 0){
-                    number=n;
-                }else if(Objects.equals(number, "")){
-                        number=n;
+                Character n = '9';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
-
-                    }else{
-                        number = number.concat(n);
-                                                          //digits limit
-                        if ( number.length() > 11){
-                            number = number.substring(0,11);
-                                                            //advise to digit limit (Toast)
-                            Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
-                            avisoCenter.setGravity(Gravity.CENTER,0,0);
-                            avisoCenter.show();
-                        }
-
-
-                    }
-                //Nine
-                saida = saida.concat(n);
+                }
                 txtRes.setText(saida);
-
             }
 
 
@@ -395,424 +239,377 @@ private static final String Tag = "Leituras";
          btnDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                      /*
-                       * it must have only one dot
-                      *
-                      */
 
-                    int dotCount,zeroCount;
-                                                      //proibido pre cast
-                                                      //number = txtRes.getText().toString();
-                                                      //how many times "." will show and filter it
-                dotCount = operacoes.dotCounter(number);
-                zeroCount = operacoes.zeroCounter(number);
-                    if(dotCount == 0){
-                                                     //add a dot to first digit, just in case
-                        if((zeroCount == 0) & (Objects.equals(number, ""))) {
-                            number = number.concat("0.");
-                            saida = saida.concat(number);
+                Character n = '.';
+                dig.passDigit(n);
+                saida = number.getNumber();
+                //digits limit
+                if ( saida.length() >= 10){
+                    saida = saida.substring(0,10);
+                    Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
+                    avisoCenter.setGravity(Gravity.CENTER,0,0);
+                    avisoCenter.show();
 
-
-                        }else{
-                            number = number.concat(".");
-                            saida = saida.concat(number);
-
-                        }
-                    }
+                }
                 txtRes.setText(saida);
             }
         });
-                                                  //AC restart
-        btnAC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number="";
-                saida="";
-                txtRes.setText(number);
-                operacoes.setResult(0);
-                operacoes.setParcela("0");
-                operacoes.setAcumulador(0);
-                operacoes.setContinua(0);
-                operacoes.setOperacao(0);
-            }
+        //AC restart
+        btnAC.setOnClickListener(view -> {
+            make.setParcela("0");
+            make.setAcumulador(0.0);
+            make.setContinua(0);
+            make.setOperacao(0);
+            dig.reset(number);
+            make.add(number);
+            make.subt(number);
+            make.multi(number);
+            make.divid(number);
+            saida="";
+            txtRes.setText(number.getNumber());
+            //make.setResult(0.0);
+
         });
 
-        // TODO ADD CLASSES AND INTERFACES TO OPERATIONS (MAIN)
+
         //A SOMA
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                                        //if the option is ADD just erase others signals if there is 
-                if ( ( saida.endsWith("-") || saida.endsWith("x") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 1)){
-                    saida = saida.substring(0, saida.length() - 1);
-                    saida = saida.concat("+");
-                     txtRes.setText(saida);
-                }
-                                        //is add
-                operacoes.setOperacao(1);
-                                        //portion
-                int continua = operacoes.getContinua();
-                                        // sequential operations
-                                        //set type of operation 
-                if(operacoes.getOperacao() == 5){
-                    number = String.valueOf(operacoes.getAcumulador()) ;
-                    operacoes.setResult(operacoes.getAcumulador());
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                    saida=saida + "+";
+        btnAdd.setOnClickListener(view -> {
+                                    //if the option is ADD just erase others signals if there is
+            if ( ( saida.endsWith("-") || saida.endsWith("x") || saida.endsWith("÷") ) && (operations.getOperacao() != 1)){
+                saida = saida.substring(0, saida.length() - 1);
+                saida = saida.concat("+");
+                 txtRes.setText(saida);
+            }
+
+            make.add(number);
+            saida = out.formatOut(make.getResult()) ;
+            saida=saida + "+";
+            txtRes.setText(saida);
+            /*
+                                    //is add
+            functions.setOperacao(1);
+                                    //portion
+            int continua = functions.getContinua();
+                                    // sequential operations
+                                    //set type of operation
+            if(functions.getOperacao() == 5){
+                number.setNumber(String.valueOf(functions.getAcumulador()));
+                functions.setResult(functions.getAcumulador());
+
+                txtRes.setText(saida);
+                functions.setOperacao(1);
+            }
+                                    //see class operations
+                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
+            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
+                functions.setParcela(number.getNumber());
+                                    //first part
+                functions.setResult(functions.getParcela());
+                functions.setAcumulador(functions.getParcela());
+                functions.setContinua(continua+1);
+
+                saida =out.formatOut(functions.getParcela()) ;
+                                    //negative numbers
+                if(functions.getResult() < 0){
+                    saida = ""+ functions.getResult();
+                    saida = "(" + saida + ")" + "+";
                     txtRes.setText(saida);
-                    operacoes.setOperacao(1);
+
+                }else {
+                    saida = saida.concat("+");
+                    txtRes.setText(saida);
+
                 }
-                                        //see class operations
-                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
-                if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
-                    operacoes.setParcela(number);
-                                        //first part
-                    operacoes.setResult(operacoes.getParcela());
-                    operacoes.setAcumulador(operacoes.getParcela());
-                    operacoes.setContinua(continua+1);
 
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                                        //negative numbers
-                    if(operacoes.getResult() < 0){
-                        saida = ""+operacoes.getResult();
-                        saida = "(" + saida + ")" + "+";
-                        txtRes.setText(saida);
-
-                    }else {
-                        saida = saida.concat("+");
-                        txtRes.setText(saida);
-
-                    }
-
-                }else if ((!number.equals("")) && (operacoes.getOperacao() == 1)){
+            }else if ((!Objects.equals(number.getNumber(),"")) && (functions.getOperacao() == 1)){
 //                    Log.d(Tag,"Click soma = ");
 //                    Log.d(Tag,"Number = "+number);
 //                    Log.d(Tag,"parcela = "+operacoes.getParcela());
 //                    Log.d(Tag,"Operacao = "+operacoes.getOperacao());
-                                        //portion 2 and so on
-                    operacoes.setParcela(number);
-                    operacoes.add();
-                                            //output have a lot of digits
-                    if (saida.length() > 9){
-                        saida = "+"+operacoes.getResult();
+                                    //portion 2 and so on
+                functions.setParcela(number.getNumber());
+                functions.add();
+                                        //output have a lot of digits
+                if (saida.length() > 9){
+                    saida = "+"+ functions.getResult();
+                    txtRes.setText(saida);
+                }else{
+                    if(functions.getResult() < 0){
+                        saida = ""+ functions.getResult();
+                        saida = "(" + saida + ")" + "+";
                         txtRes.setText(saida);
-                    }else{
-                        if(operacoes.getResult() < 0){
-                            saida = ""+operacoes.getResult();
-                            saida = "(" + saida + ")" + "+";
-                            txtRes.setText(saida);
-                        }else {
-                            saida = saida.concat("+");
-                            txtRes.setText(saida);
-                        }
+                    }else {
+                        saida = saida.concat("+");
+                        txtRes.setText(saida);
                     }
-                    operacoes.setContinua(continua+1);
                 }
-                number = "";
-                operacoes.setParcela("0");
+                functions.setContinua(continua+1);
             }
+            number.setNumber("");
+            functions.setParcela("0");*/
+
         });
 
           // A SUBTRAÇÃO
-        btnSub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                                                  //if the option is Sub just erase others signals if there is 
-                if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 2)){
-                    saida = saida.substring(0, saida.length() - 1);
+        btnSub.setOnClickListener(view -> {
+                                              //if the option is Sub just erase others signals if there is
+            if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("÷") ) && (operations.getOperacao() != 2)){
+                saida = saida.substring(0, saida.length() - 1);
+                saida = saida.concat("-");
+                txtRes.setText(saida);
+            }
+
+            make.subt(number);
+            saida = out.formatOut(make.getResult()) ;
+            saida=saida + "-";
+            txtRes.setText(saida);
+            /*
+                                //it is SUB
+            functions.setOperacao(2);
+
+            int continua = functions.getContinua();
+                                   // sequential operations
+                                    //set type of operation
+            if(functions.getOperacao() == 5){
+                //number.setNumber("");
+                number.setNumber(String.valueOf(functions.getAcumulador()));
+                functions.setResult(functions.getAcumulador());
+                saida =out.formatOut(functions.getParcela()) ;
+                saida=saida + "-";
+                txtRes.setText(saida);
+                functions.setOperacao(2);
+            }
+                                    //see class operations
+                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
+            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
+                functions.setParcela(number.getNumber());
+                functions.setResult(functions.getParcela());
+                functions.setAcumulador(functions.getParcela());
+                functions.setContinua(continua+1);
+
+                saida =out.formatOut(functions.getParcela()) ;
+                                         //negative numbers
+                if(functions.getResult() < 0){
+                    saida = ""+ functions.getResult();
+                    saida = "(" + saida + ")" + "-";
+                    txtRes.setText(saida);
+                }else {
                     saida = saida.concat("-");
                     txtRes.setText(saida);
                 }
-                                    //it is SUB
-                operacoes.setOperacao(2);
 
-                int continua = operacoes.getContinua();
-                                       // sequential operations
-                                        //set type of operation 
-                if(operacoes.getOperacao() == 5){
-                    //number = "";
-                    number = String.valueOf(operacoes.getAcumulador()) ;
-                    operacoes.setResult(operacoes.getAcumulador());
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                    saida=saida + "-";
-                    txtRes.setText(saida);
-                    operacoes.setOperacao(2);
-                }
-                                        //see class operations
-                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
-                if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
-                    operacoes.setParcela(number);
-                    operacoes.setResult(operacoes.getParcela());
-                    operacoes.setAcumulador(operacoes.getParcela());
-                    operacoes.setContinua(continua+1);
-
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                                             //negative numbers
-                    if(operacoes.getResult() < 0){
-                        saida = ""+operacoes.getResult();
-                        saida = "(" + saida + ")" + "-";
-                        txtRes.setText(saida);
-                    }else {
-                        saida = saida.concat("-");
-                        txtRes.setText(saida);
-                    }
-
-
-                }else if (!number.equals("") && (operacoes.getOperacao() == 2)){
+            }else if (!Objects.equals(number.getNumber(),"") && (functions.getOperacao() == 2)){
 //debug
 //Log.d(Tag,"Click sub = ");
 //Log.d(Tag,"Number = "+number);
 //Log.d(Tag,"parcela = "+operacoes.getParcela());
 //Log.d(Tag,"Operacao = "+operacoes.getOperacao());
 
-                    operacoes.setParcela(number);
-                    operacoes.subt();
-                                    //output have a lot of digits
-                    if (saida.length() > 9){
-                        saida = "-"+operacoes.getResult();
+                functions.setParcela(number.getNumber());
+                functions.subt();
+                                //output have a lot of digits
+                if (saida.length() > 9){
+                    saida = "-"+ functions.getResult();
+                    txtRes.setText(saida);
+                }else{
+                    if(functions.getResult() < 0){
+                        saida = ""+ functions.getResult();
+                        saida = "(" + saida + ")" + "-";
                         txtRes.setText(saida);
-                    }else{
-                        if(operacoes.getResult() < 0){
-                            saida = ""+operacoes.getResult();
-                            saida = "(" + saida + ")" + "-";
-                            txtRes.setText(saida);
-                        }else {
-                            saida = saida.concat("-");
-                            txtRes.setText(saida);
-                        }
+                    }else {
+                        saida = saida.concat("-");
+                        txtRes.setText(saida);
                     }
-                    operacoes.setContinua(continua+1);
                 }
-                number = "";
-                operacoes.setParcela("0");
+                functions.setContinua(continua+1);
             }
+            number.setNumber("");
+            functions.setParcela("0");
+
+            */
+
+
         });
 
         //A MULTIPLICAÇÃO
-        btnMulti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                                 //if the option is Multi just erase others signals if there is 
-                if ( ( saida.endsWith("+") || saida.endsWith("-") || saida.endsWith("÷") ) && (operacoes.getOperacao() != 3)){
-                    saida = saida.substring(0, saida.length() - 1);
+        btnMulti.setOnClickListener(view -> {
+                             //if the option is Multi just erase others signals if there is
+            if ( ( saida.endsWith("+") || saida.endsWith("-") || saida.endsWith("÷") ) && (operations.getOperacao() != 3)){
+                saida = saida.substring(0, saida.length() - 1);
+                saida = saida.concat("x");
+                txtRes.setText(saida);
+            }
+
+                make.multi(number);
+            saida = out.formatOut(make.getResult()) ;
+            saida=saida + "x";
+            txtRes.setText(saida);
+            /*
+            int continua = functions.getContinua();
+            if(functions.getOperacao() == 5){
+                number.setNumber("");
+                number.setNumber(String.valueOf(functions.getAcumulador()));
+                functions.setResult(functions.getAcumulador());
+                saida =out.formatOut(functions.getParcela()) ;
+                saida=saida + "x";
+                txtRes.setText(saida);
+                functions.setOperacao(3);
+            }
+                                            //it is MULT
+            functions.setOperacao(3);
+                                        //see class operations
+                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
+            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
+                 functions.setParcela(number.getNumber());
+                 functions.setAcumulador(1);
+                 functions.setResult(1);
+                 functions.multi();
+                 functions.setContinua(continua+1);
+                 saida =out.formatOut(functions.getParcela()) ;
+
+                if(functions.getResult() < 0){
+                    saida = ""+ functions.getResult();
+                    saida = "(" + saida + ")" + "x";
+                    txtRes.setText(saida);
+                }else {
                     saida = saida.concat("x");
                     txtRes.setText(saida);
                 }
-                                            
-                int continua = operacoes.getContinua();
-                if(operacoes.getOperacao() == 5){
-                    number = "";
-                    number = String.valueOf(operacoes.getAcumulador()) ;
-                    operacoes.setResult(operacoes.getAcumulador());
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                    saida=saida + "x";
-                    txtRes.setText(saida);
-                    operacoes.setOperacao(3);
-                }
-                                                //it is MULT
-                operacoes.setOperacao(3);
-                                            //see class operations
-                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
-                if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
-                     operacoes.setParcela(number);
-                     operacoes.setAcumulador(1);
-                     operacoes.setResult(1);
-                     operacoes.multi();
-                     operacoes.setContinua(continua+1);
-                     saida =operacoes.showResult(operacoes.getParcela()) ;
 
-                    if(operacoes.getResult() < 0){
-                        saida = ""+operacoes.getResult();
+            }else if (!Objects.equals(number.getNumber(), "")){
+                                        //pega result anterior e armazena na parcela
+                functions.setParcela(number.getNumber());
+                functions.multi();
+                                         //output have a lot of digits
+                if (saida.length() > 9){
+                    saida = functions.getResult()+"x";
+                    txtRes.setText(saida);
+                }else{
+
+                    if(functions.getResult() < 0){
+                        saida = ""+ functions.getResult();
                         saida = "(" + saida + ")" + "x";
                         txtRes.setText(saida);
                     }else {
                         saida = saida.concat("x");
                         txtRes.setText(saida);
                     }
-
-                }else if (!Objects.equals(number, "")){
-                                            //pega result anterior e armazena na parcela
-                    operacoes.setParcela(number);
-                    operacoes.multi();
-                                             //output have a lot of digits
-                    if (saida.length() > 9){
-                        saida = operacoes.getResult()+"x";
-                        txtRes.setText(saida);
-                    }else{
-
-                        if(operacoes.getResult() < 0){
-                            saida = ""+operacoes.getResult();
-                            saida = "(" + saida + ")" + "x";
-                            txtRes.setText(saida);
-                        }else {
-                            saida = saida.concat("x");
-                            txtRes.setText(saida);
-                        }
-                    }
                 }
-                number = "";
-                operacoes.setParcela("0");
             }
+            number.setNumber("");
+            functions.setParcela("0");
+            */
+
         });
+
         //A DIVISÃO
-        btnDiv.setOnClickListener(new View.OnClickListener() {
+        btnDiv.setOnClickListener(view -> {
+                                   //if the option is DIV just erase others signals if there is
+            if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("-") ) && (operations.getOperacao() != 4)){
+                saida = saida.substring(0, saida.length() - 1);
+                saida = saida.concat("÷");
+                txtRes.setText(saida);
+            }
 
-            @Override
-            public void onClick(View view) {
-                                       //if the option is DIV just erase others signals if there is 
-                if ( ( saida.endsWith("+") || saida.endsWith("x") || saida.endsWith("-") ) && (operacoes.getOperacao() != 4)){
-                    saida = saida.substring(0, saida.length() - 1);
-                    saida = saida.concat("÷");
+            make.divid(number);
+            saida = out.formatOut(make.getResult()) ;
+            saida=saida + "÷";
+            txtRes.setText(saida);
+            /*
+            int continua = functions.getContinua();
+            if(functions.getOperacao() == 5){
+                number.setNumber("");
+                number.setNumber(String.valueOf(functions.getAcumulador()));
+                functions.setResult(functions.getAcumulador());
+                saida =out.formatOut(functions.getParcela()) ;
+                saida=saida + "÷";
+                txtRes.setText(saida);
+                functions.setOperacao(4);
+            }
+                                          //it is DIV
+            functions.setOperacao(4);
+
+                                   //see class operations
+                                    //flag Continue after click +(se vem da operação de igaldade ou click +)
+            if( (functions.getContinua() == 0) & (!Objects.equals(number.getNumber(), ""))) {
+                functions.setParcela(number.getNumber());
+                functions.setResult(functions.getParcela());
+                functions.setAcumulador(functions.getParcela());
+                functions.setContinua(continua+1);
+                saida =out.formatOut(functions.getParcela()) ;
+
+                if(functions.getResult() < 0){
+
+                    saida = ""+ functions.getResult();
+                    saida = "(" + saida + ")" + "÷";
                     txtRes.setText(saida);
-                }
-              
-                int continua = operacoes.getContinua();
-                if(operacoes.getOperacao() == 5){
-                    number = "";
-                    number = String.valueOf(operacoes.getAcumulador()) ;
-                    operacoes.setResult(operacoes.getAcumulador());
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
-                    saida=saida + "÷";
+
+                }else {
+                   saida = saida.concat("÷");
                     txtRes.setText(saida);
-                    operacoes.setOperacao(4);
+
                 }
-                                              //it is DIV
-                operacoes.setOperacao(4);
 
-                                       //see class operations
-                                        //flag Continue after click +(se vem da operação de igaldade ou click +)
-                if( (operacoes.getContinua() == 0) & (!Objects.equals(number, ""))) {
-                    operacoes.setParcela(number);
-                    operacoes.setResult(operacoes.getParcela());
-                    operacoes.setAcumulador(operacoes.getParcela());
-                    operacoes.setContinua(continua+1);
-                    saida =operacoes.showResult(operacoes.getParcela()) ;
+            }else if (!Objects.equals(number.getNumber(), "")){
 
-                    if(operacoes.getResult() < 0){
+                functions.setParcela(number.getNumber());
+                functions.divid();
+                functions.setContinua(continua+1);
+                                                    //output have a lot of digits
+                if (saida.length() > 9){
+                    saida = functions.getResult()+"÷";
+                    txtRes.setText(saida);
 
-                        saida = ""+operacoes.getResult();
+                }else{
+
+                    if(functions.getResult() < 0){
+                        saida = ""+ functions.getResult();
                         saida = "(" + saida + ")" + "÷";
                         txtRes.setText(saida);
 
                     }else {
-                       saida = saida.concat("÷");
+                        saida = saida.concat("÷");
                         txtRes.setText(saida);
-
-                    }
-
-                }else if (!Objects.equals(number, "")){
-
-                    operacoes.setParcela(number);
-                    operacoes.divid();
-                    operacoes.setContinua(continua+1);
-                                                        //output have a lot of digits
-                    if (saida.length() > 9){
-                        saida = operacoes.getResult()+"÷";
-                        txtRes.setText(saida);
-
-                    }else{
-
-                        if(operacoes.getResult() < 0){
-                            saida = ""+operacoes.getResult();
-                            saida = "(" + saida + ")" + "÷";
-                            txtRes.setText(saida);
-
-                        }else {
-                            saida = saida.concat("÷");
-                            txtRes.setText(saida);
-                        }
                     }
                 }
-                number = "";
-                operacoes.setParcela("0");
             }
+            number.setNumber("");
+            functions.setParcela("0");
+            */
+
         });
 
         //Equals
-        btnEquals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                                            //result must be generate when click on equals 
-                switch (operacoes.getOperacao()) {
-                    case 0:
+        btnEquals.setOnClickListener(view -> {
+                                        //result must be generate when click on equals
+                                        //final result of obj
+                                        //filter to show
+                                        //number != empty
 
-                        operacoes.setOperacao(0);
-                        operacoes.setContinua(0);
+            saida = "= " + out.formatOut(make.getResult());
+            txtRes.setText(saida);
+                                        //restart
+                                        //save the last result to next operation, just in case
+            if(Objects.equals(out.formatOut(make.getResult()), "0")){
+                make.setOperacao(0);
+                //make.setResult(dig.getDoubleOfNumber());
 
-                        break;
+            }else{
+                dig.setNumber(String.valueOf(make.getResult()));
+               // make.setParcela(String.valueOf(make.getResult()));
+                make.setAcumulador(make.getResult());
+                //make.setOperacao(5);
+                make.setResult(dig.getDoubleOfNumber());
 
-                    case 1:
+                saida ="= " + out.formatOut(make.getResult()) ;
 
-                        if (operacoes.getContinua() >= 2) {
-                            operacoes.setParcela(number);
-                            operacoes.add();
-                            operacoes.setContinua(0);
-
-                        } else {
-                            operacoes.setParcela(number);
-                            operacoes.add();
-                            operacoes.setContinua(0);
-                        }
-
-                        break;
-                    case 2:
-                        if (operacoes.getContinua() >= 2) {
-                            operacoes.setParcela(number);
-                            operacoes.subt();
-                            operacoes.setContinua(2);
-
-                        } else {
-                            operacoes.setParcela(number);
-                            operacoes.subt();
-                            operacoes.setContinua(0);
-                        }
-                        break;
-                    case 3:
-                        if (operacoes.getContinua() >= 2) {
-                            operacoes.setParcela(number);
-                            operacoes.multi();
-                            operacoes.setContinua(2);
-
-                        } else {
-                            operacoes.setParcela(number);
-                            operacoes.multi();
-                            operacoes.setContinua(0);
-                        }
-
-                        break;
-                    case 4:
-                        if (operacoes.getContinua() >= 2) {
-                            operacoes.setParcela(number);
-                            operacoes.divid();
-                            operacoes.setContinua(2);
-
-                        } else {
-                            operacoes.setParcela(number);
-                            operacoes.divid();
-                            operacoes.setContinua(0);
-                        }
-                        break;
-
-                }
-
-                                            // final result of obj
-                                            //filter to show
-                saida = "= "+operacoes.showResult(operacoes.getResult());
                 txtRes.setText(saida);
-                                            //restart
-                                            //save the last result to next operation, just in case
-                if(number.equals("")){
-                    operacoes.setOperacao(0);
-                }else{
-                    operacoes.setParcela(String.valueOf(operacoes.getResult()));
-                    operacoes.setAcumulador(operacoes.getResult());
-                    operacoes.setOperacao(5);
-                }
-                number="";
-                saida="";
-                operacoes.setResult(0);
-
             }
+
+            dig.reset(number);
+            saida="";
+            make.setResult(0);
+
         });
 
     }

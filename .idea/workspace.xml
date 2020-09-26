@@ -9,14 +9,38 @@
       </config>
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Digit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Inputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Outputing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Outputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Calculator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidBtnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,31 +63,90 @@
   <component name="FavoritesManager">
     <favorites_list name="Calculator" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1hAD783kpV9mN3zmowZGeEuYMa8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/mnt/storages/samsunghd/AndroidWindows/AndroidProjects/m3-assignment-shapes-skeleton" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Shell Script" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="AndroidBtnTest" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brnfra.brnfrancocalc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.brnfra.brnfrancocalc" />
+      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidBtnTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AndroidBtnTest.btnEqualsFunc_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brnfra.brnfrancocalc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.brnfra.brnfrancocalc" />
+      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidBtnTest" />
+      <option name="METHOD_NAME" value="btnEqualsFunc_isCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zeroBtnTest" type="AndroidJUnit" factoryName="Android JUnit">
+      <module name="app" />
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <dir value="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -119,6 +202,14 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.AndroidBtnTest.btnEqualsFunc_isCorrect" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -145,29 +236,74 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update readme and main.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Update readme and main.java" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1662" y="587" width="945" height="666" key="#AndroidBtnTest" timestamp="1601005011458">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1662" y="587" width="945" height="666" key="#AndroidBtnTest/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601005011458" />
+    <state x="1659" y="569" width="945" height="666" key="#brnfrancocalc_in_app" timestamp="1600787611480">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1659" y="569" width="945" height="666" key="#brnfrancocalc_in_app/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600787611480" />
+    <state x="1867" y="189" width="530" height="475" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1600789448860">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1867" y="189" width="530" height="475" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600789448860" />
+    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1601044765132">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1600" y="935" width="1080" height="965" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601044765132" />
+    <state x="1945" y="643" width="380" height="553" key="#com.intellij.ide.util.MemberChooser" timestamp="1600799093342">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1945" y="643" width="380" height="553" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600799093342" />
+    <state x="1820" y="649" width="630" height="541" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601004993109">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1820" y="649" width="630" height="541" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601004993109" />
+    <state x="521" y="-18" width="1076" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601121595540">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="521" y="-18" width="1076" height="900" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601121595540" />
+    <state x="1665" y="235" width="945" height="666" key="#zeroBtnTest" timestamp="1600787867096">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1665" y="235" width="945" height="666" key="#zeroBtnTest/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600787867096" />
+    <state x="1720" y="207" width="830" height="475" key="AndroidCreateResourceDirectoryDialog" timestamp="1600788307227">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1720" y="207" width="830" height="475" key="AndroidCreateResourceDirectoryDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600788307227" />
     <state x="40" y="-4" width="1719" height="1005" key="CommitChangelistDialog2" timestamp="1599447125676">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="40" y="-4" width="1719" height="1005" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447125676" />
-    <state width="1870" height="235" key="GridCell.Tab.0.bottom" timestamp="1599447229003">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl" timestamp="1601087884289">
+      <screen x="1600" y="0" width="1080" height="1920" />
     </state>
+    <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601087884289" />
+    <state width="1030" height="344" key="GridCell.Tab.0.bottom" timestamp="1601144025290">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1030" height="344" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
     <state width="1870" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1870" height="235" key="GridCell.Tab.0.center" timestamp="1599447229003">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1030" height="344" key="GridCell.Tab.0.center" timestamp="1601144025290">
+      <screen x="1600" y="0" width="1080" height="1920" />
     </state>
+    <state width="1030" height="344" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
     <state width="1870" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1870" height="235" key="GridCell.Tab.0.left" timestamp="1599447229003">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1030" height="344" key="GridCell.Tab.0.left" timestamp="1601144025290">
+      <screen x="1600" y="0" width="1080" height="1920" />
     </state>
+    <state width="1030" height="344" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
     <state width="1870" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1870" height="235" key="GridCell.Tab.0.right" timestamp="1599447229003">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1030" height="344" key="GridCell.Tab.0.right" timestamp="1601144025290">
+      <screen x="1600" y="0" width="1080" height="1920" />
     </state>
+    <state width="1030" height="344" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144025290" />
     <state width="1870" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
     <state x="1600" y="948" width="1080" height="951" key="SettingsEditor" timestamp="1599560915637">
       <screen x="1600" y="0" width="1080" height="1920" />
@@ -177,15 +313,19 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1600" y="935" width="1080" height="965" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739120371" />
-    <state x="1922" y="473" key="com.intellij.ide.util.TipDialog" timestamp="1600008067048">
+    <state x="1904" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1601120936075">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="494" y="249" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@0.0.1600.900" timestamp="1599560438407" />
-    <state x="1922" y="473" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600008067048" />
+    <state x="1904" y="365" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601120936075" />
     <state x="599" y="325" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495921306" />
     <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599495864393">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495864393" />
+    <state x="1677" y="461" width="926" height="963" key="find.popup" timestamp="1601081579360">
+      <screen x="1600" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1677" y="461" width="926" height="963" key="find.popup/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601081579360" />
   </component>
 </project>
