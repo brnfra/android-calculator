@@ -13,34 +13,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Digit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Inputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Outputing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Outputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="Update readme and main.java. Major alter Add Unit tests and separate on classes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operacoes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidBtnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599447125850</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update readme and main.java. Major alter Add Unit tests and separate on classes.">
+      <created>1601144159371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601144159371</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update readme and main.java. Major alter Add Unit tests and separate on classes.">
+      <created>1601144203288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601144203288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -238,7 +226,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update readme and main.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme and main.java" />
+    <MESSAGE value="Update readme and main.java. Major alter Add Unit tests and separate on classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update readme and main.java. Major alter Add Unit tests and separate on classes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1662" y="587" width="945" height="666" key="#AndroidBtnTest" timestamp="1601005011458">
@@ -277,10 +266,10 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1720" y="207" width="830" height="475" key="AndroidCreateResourceDirectoryDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1600788307227" />
-    <state x="1620" y="-25" width="1719" height="1005" key="CommitChangelistDialog2" timestamp="1601144159118">
-      <screen x="1600" y="0" width="1080" height="1920" />
+    <state x="514" y="-61" width="1080" height="900" key="CommitChangelistDialog2" timestamp="1601144221366">
+      <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="1620" y="-25" key="CommitChangelistDialog2/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144159118" />
+    <state x="514" y="-61" width="1080" height="900" key="CommitChangelistDialog2/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601144221366" />
     <state x="40" y="-4" width="1719" height="1005" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447125676" />
     <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl" timestamp="1601087884289">
       <screen x="1600" y="0" width="1080" height="1920" />
