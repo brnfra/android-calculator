@@ -13,11 +13,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/brnfra/brnfrancocalc/Operations.java" afterDir="false" />
-    </list>
+    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601159433730</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update readme and main.java. Major alter Add Unit tests and separate on classes.">
+      <created>1601159651388</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601159651388</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -300,25 +303,25 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601087884289" />
-    <state width="1030" height="281" key="GridCell.Tab.0.bottom" timestamp="1601159075399">
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom" timestamp="1601159722612">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722612" />
     <state width="1870" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.center" timestamp="1601159075399">
+    <state width="1030" height="281" key="GridCell.Tab.0.center" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
+    <state width="1030" height="281" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.left" timestamp="1601159075399">
+    <state width="1030" height="281" key="GridCell.Tab.0.left" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
+    <state width="1030" height="281" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.right" timestamp="1601159075399">
+    <state width="1030" height="281" key="GridCell.Tab.0.right" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159075399" />
+    <state width="1030" height="281" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
     <state x="1600" y="948" width="1080" height="951" key="SettingsEditor" timestamp="1599560915637">
       <screen x="1600" y="0" width="1080" height="1920" />
