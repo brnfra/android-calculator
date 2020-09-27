@@ -13,22 +13,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidBtnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/brnfra/brnfrancocalc/AndroidInputTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="49b7b57f-eae0-421a-b741-4f1cd21020aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,8 +74,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Shell Script" />
   </component>
-  <component name="RunManager" selected="Android JUnit.AndroidInputTest">
-    <configuration name="AndroidInputTest" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
+  <component name="RunManager" selected="Android JUnit.AndroidBtnTest">
+    <configuration name="AndroidBtnTest" type="AndroidJUnit" factoryName="Android JUnit" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +84,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.brnfra.brnfrancocalc" />
-      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidInputTest" />
+      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidBtnTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AndroidInputTest.btnEqualsFunc_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AndroidBtnTest.btnEqualsFunc_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +100,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.brnfra.brnfrancocalc" />
-      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidInputTest" />
+      <option name="MAIN_CLASS_NAME" value="com.brnfra.brnfrancocalc.AndroidBtnTest" />
       <option name="METHOD_NAME" value="btnEqualsFunc_isCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -196,7 +181,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.AndroidInputTest.btnEqualsFunc_isCorrect" />
+        <item itemvalue="Android JUnit.AndroidBtnTest.btnEqualsFunc_isCorrect" />
       </list>
     </recent_temporary>
   </component>
@@ -260,9 +245,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -320,25 +303,25 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1914" y="646" width="430" height="475" key="FileChooserDialogImpl/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601087884289" />
-    <state width="1030" height="281" key="GridCell.Tab.0.bottom" timestamp="1601169334638">
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom" timestamp="1601159722612">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601169334638" />
+    <state width="1030" height="281" key="GridCell.Tab.0.bottom/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722612" />
     <state width="1870" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.center" timestamp="1601169334638">
+    <state width="1030" height="281" key="GridCell.Tab.0.center" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601169334638" />
+    <state width="1030" height="281" key="GridCell.Tab.0.center/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.left" timestamp="1601169334638">
+    <state width="1030" height="281" key="GridCell.Tab.0.left" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601169334638" />
+    <state width="1030" height="281" key="GridCell.Tab.0.left/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
-    <state width="1030" height="281" key="GridCell.Tab.0.right" timestamp="1601169334638">
+    <state width="1030" height="281" key="GridCell.Tab.0.right" timestamp="1601159722611">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
-    <state width="1030" height="281" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601169334638" />
+    <state width="1030" height="281" key="GridCell.Tab.0.right/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601159722611" />
     <state width="1870" height="235" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599447229003" />
     <state x="1600" y="948" width="1080" height="951" key="SettingsEditor" timestamp="1599560915637">
       <screen x="1600" y="0" width="1080" height="1920" />
@@ -348,11 +331,11 @@
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="1600" y="935" width="1080" height="965" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1599739120371" />
-    <state x="1901" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1601167764903">
+    <state x="1904" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1601120936075">
       <screen x="1600" y="0" width="1080" height="1920" />
     </state>
     <state x="494" y="249" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@0.0.1600.900" timestamp="1599560438407" />
-    <state x="1901" y="347" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601167764903" />
+    <state x="1904" y="365" key="com.intellij.ide.util.TipDialog/0.0.1600.900/1600.0.1080.1920@1600.0.1080.1920" timestamp="1601120936075" />
     <state x="599" y="325" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1600.900@0.0.1920.1080" timestamp="1599495921306" />
     <state x="706" y="416" width="498" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599495864393">
       <screen x="0" y="0" width="1920" height="1080" />

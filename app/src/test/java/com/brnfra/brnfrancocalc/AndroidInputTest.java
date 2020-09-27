@@ -31,25 +31,6 @@ public class AndroidInputTest {
         this.op=make;
     }
 
-    public void reset(){
-        make.setParcela("0");
-        make.setAcumulador(0.0);
-        make.setContinua(0);
-        make.setOperacao(0);
-        dig.reset(number);
-        make.add(number);
-        make.subt(number);
-        make.multi(number);
-        make.divid(number);
-        make.setParcela("0");
-        make.setAcumulador(0.0);
-        make.setContinua(0);
-        make.setOperacao(0);
-        dig.reset(number);
-        make.setResult(0.0);
-        make.setEquals(number);
-    }
-
     @Test
     public void btnDigitTest() {
 
