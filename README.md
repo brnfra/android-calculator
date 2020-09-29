@@ -8,7 +8,7 @@ On MIT License without any warranties!
 - [x] Make auto tests
 - [x] Organize the classes
 - [ ] Accessibility
-- [ ] Implement expressions by operations()
+- [x] Implement expressions by operations()
 - [ ] +/- Button
 - [ ] Add action-menu
 
