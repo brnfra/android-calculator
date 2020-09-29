@@ -16,12 +16,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-//String number="";
-
-String saida="";
-Digit dig;
-Operating make;
-Outputing out;
+private String saida="";
+private Digit dig;
+private Operating make;
+private Outputing out;
                                       //Tag to debug
 private static final String Tag = "Debug";
     @Override
@@ -30,23 +28,23 @@ private static final String Tag = "Debug";
         setContentView(R.layout.activity_main);
                                                                      //objs
         final TextView txtRes =  findViewById(R.id.txtRes);
-        Button btnZero =  findViewById(R.id.btnZero);
-        Button btnOne =  findViewById(R.id.btnOne);
-        Button btnTwo =  findViewById(R.id.btnTwo);
-        Button btnThree =  findViewById(R.id.btnThree);
-        Button btnFour =  findViewById(R.id.btnFour);
-        Button btnFive =  findViewById(R.id.btnFive);
-        Button btnSix =  findViewById(R.id.btnSix);
-        Button btnSeven =  findViewById(R.id.btnSeven);
-        Button btnEight =  findViewById(R.id.btnEight);
-        Button btnNine =  findViewById(R.id.btnNine);
-        Button btnDot =  findViewById(R.id.btnDot);
-        Button btnAdd =  findViewById(R.id.btnAdd);
-        Button btnSub =  findViewById(R.id.btnSub);
-        Button btnMulti =  findViewById(R.id.btnMulti);
-        Button btnDiv =  findViewById(R.id.btnDiv);
-        Button btnAC =  findViewById(R.id.btnAC);
-        Button btnEquals =  findViewById(R.id.btnEquals);
+        final Button btnZero =  findViewById(R.id.btnZero);
+        final Button btnOne =  findViewById(R.id.btnOne);
+        final Button btnTwo =  findViewById(R.id.btnTwo);
+        final Button btnThree =  findViewById(R.id.btnThree);
+        final Button btnFour =  findViewById(R.id.btnFour);
+        final Button btnFive =  findViewById(R.id.btnFive);
+        final Button btnSix =  findViewById(R.id.btnSix);
+        final Button btnSeven =  findViewById(R.id.btnSeven);
+        final Button btnEight =  findViewById(R.id.btnEight);
+        final Button btnNine =  findViewById(R.id.btnNine);
+        final Button btnDot =  findViewById(R.id.btnDot);
+        final Button btnAdd =  findViewById(R.id.btnAdd);
+        final Button btnSub =  findViewById(R.id.btnSub);
+        final Button btnMulti =  findViewById(R.id.btnMulti);
+        final Button btnDiv =  findViewById(R.id.btnDiv);
+        final Button btnAC =  findViewById(R.id.btnAC);
+        final Button btnEquals =  findViewById(R.id.btnEquals);
 
                                                    //To set functions and operations
         Operations operations = new Operations();
