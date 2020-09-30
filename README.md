@@ -13,4 +13,5 @@ On MIT License without any warranties!
 - [ ] Add action-menu
 
 ## Sample
-![App Screen](https://github.com/brnfra/android_calculator_brnfra/blob/master/app/src/main/app_image.png)
+
+<img src="https://github.com/brnfra/android_calculator_brnfra/blob/master/app/src/main/app_image.png" width="188">
