@@ -4,6 +4,8 @@ package com.brnfra.brnfrancocalc;
 * * A simple App to calc; Realize only four basic operations( + - x ÷ ) 
 * Class with the main functionalities of calculator
 */
+import android.util.Log;
+
 import java.util.Objects;
 
 public class Operations implements Operating {
@@ -78,7 +80,7 @@ public class Operations implements Operating {
 
         if(getOperacao() == 5){
            /* number.setNumber(String.valueOf(getAcumulador()));*/
-            setEquals(number);
+          //  number.setNumber(String.valueOf(getAcumulador()));
             setOperacao(1);
             return;
         }
@@ -107,9 +109,14 @@ public class Operations implements Operating {
                             // sequential operations
                             //set type of operation
         if(getOperacao() == 5){
-            number.setNumber(String.valueOf(getAcumulador()));
+            //
+            // number.setNumber(String.valueOf(getAcumulador()));
           //  setResult(getAcumulador());
+
+            //number.setNumber(String.valueOf(getAcumulador()));
+
             setOperacao(2);
+            //setEquals(number);
         }
         setOperacao(2);
         int continua = getContinua();
@@ -121,12 +128,15 @@ public class Operations implements Operating {
             setAcumulador(getParcela());
             setContinua(continua+1);
            // this.result = getParcela();
-        }else {
+        }else if ((!Objects.equals(number.getNumber(),"")) && (getContinua() > 0)){
             setParcela(number.getNumber());
-            this.result = this.acumulador  - parcela;
+            this.result = this.result  - this.parcela;
            // this.result = this.result - getParcela();
             this.acumulador = this.result ;
-
+                  //  Log.d(Tag,"Click subt Log = ");
+                //   Log.d(Tag,"result = "+ this.result );
+               //    Log.d(Tag,"parcela = "+getParcela());
+                //   Log.d(Tag,"acumulador = "+this.acumulador);
             setContinua(continua+1);
         }
         number.reset(number);
@@ -138,10 +148,11 @@ public class Operations implements Operating {
 
         int continua = getContinua();
         if(getOperacao() == 5){
-            number.reset(number);
-            number.setNumber(String.valueOf(getAcumulador()));
+            this.result = this.acumulador;
+            //number.setNumber(String.valueOf(getAcumulador()));
            // setResult(getAcumulador());
             setOperacao(3);
+            //setContinua(0);
         }
         //it is MULT
         setOperacao(3);
@@ -158,7 +169,7 @@ public class Operations implements Operating {
             setParcela(number.getNumber());
             this.result =  this.result*getParcela();
             this.acumulador = this.result;
-
+            setContinua(continua+1);
         }
         number.reset(number);
         setParcela("0");
@@ -203,27 +214,26 @@ public class Operations implements Operating {
     public void setEquals(Inputs number) {
 
         switch (getOperacao()) {
-            case 0:
-                setOperacao(0);
 
-                break;
             case 1:
-
                 add(number);
-                setContinua(0);
+                setOperacao(5);
+                setContinua(1);
                 break;
             case 2:
-
                 subt(number);
-                setContinua(0);
+                setOperacao(5);
+                setContinua(1);
                 break;
             case 3:
-
                 multi(number);
+                setOperacao(5);
+                setContinua(1);
                 break;
             case 4:
-
                 divid(number);
+                setOperacao(5);
+                setContinua(1);
                 break;
         }
     }

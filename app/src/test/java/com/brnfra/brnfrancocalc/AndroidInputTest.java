@@ -99,6 +99,30 @@ public class AndroidInputTest {
 
     }
     @Test
+    public void outputAddStringTest(){
+        String saida = "";
+        dig.reset(number);
+        dig.setNumber("110");
+        make.add(number);
+        saida = out.formatOut(make.getResult()) ;
+        saida=saida + "+";
+        assertEquals("110+",saida);
+    }
+    @Test
+    public void outputMultiStringAfterEqualsTest(){
+        String saida = "";
+        dig.reset(number);
+        dig.setNumber("110");
+        make.add(number);
+        dig.setNumber("10");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        make.multi(number);
+        saida = out.formatOut(make.getResult()) ;
+        saida=saida.concat("x") ;
+        assertEquals("120x",saida);
+    }
+    @Test
     public void addAfterEqualsTest(){
 
         dig.reset(number);
@@ -118,7 +142,19 @@ public class AndroidInputTest {
         op.subt(number);
         dig.setNumber("103");
         op.subt(number);
+        make.setEquals(number);
         assertEquals(-3.0,op.getResult(),0.00001);
+    }
+    @Test
+    public void outputSubtStringTest(){
+        String saida = "";
+
+        dig.setNumber("196");
+        make.subt(number);
+        saida = out.formatOut(make.getResult()) ;
+        saida=saida + "-";
+
+        assertEquals("196-",saida);
     }
     @Test
     public void subtAfterEqualsTest(){
@@ -154,6 +190,18 @@ public class AndroidInputTest {
         assertEquals("320",out.formatOut(make.getResult()));
     }
     @Test
+    public void outputMultiStringTest(){
+        String saida = "";
+
+        dig.setNumber("96");
+
+        make.multi(number);
+        saida = out.formatOut(make.getResult()) ;
+        saida=saida + "x";
+
+        assertEquals("96x",saida);
+    }
+    @Test
     public void dividTest(){
 
         dig.passDigit('0');
@@ -176,53 +224,105 @@ public class AndroidInputTest {
         make.setEquals(number);
         assertEquals("3.2",out.formatOut(make.getResult()));
     }
-    
+    @Test
+    public void outputDividStringTest(){
+        String saida = "";
+        dig.setNumber("6");
+        make.divid(number);
+        saida = out.formatOut(make.getResult()) ;
+        saida=saida + "÷";
+        assertEquals("6÷",saida);
+    }
     @Test
     public void equalsTest(){
-//TODO make test equals value saved to next operation
-        dig.passDigit('1');         //1
-        op.add(number);                //1  +
-        dig.passDigit('3');         //1  +  3
-        op.add(number);                //4  +
-        dig.passDigit('1');         //4  -  1
-        op.subt(number);               //3  -
-        dig.passDigit('2');         //3  -  2
-        op.multi(number);              //3  *  2
-        dig.passDigit('2');         //6  *  2
-        op.divid(number);              //6  /  2
+
+        dig.passDigit('1');
+        op.add(number);
+        dig.passDigit('3');
+        op.add(number);
+        dig.passDigit('1');
+        op.subt(number);
+        dig.passDigit('2');
+        op.multi(number);
+        dig.passDigit('2');
+        op.divid(number);
         assertEquals("3",out.formatOut(make.getResult()));
     }
     @Test
     public void equalsAcumulatorTest(){
-        dig.passDigit('1');         //1
-        op.add(number);                //1  +
-        dig.passDigit('3');         //1  +  3
-        op.add(number);                //4  +
-        dig.passDigit('1');         //4  -  1
-        op.subt(number);               //3  -
-        dig.passDigit('2');         //3  -  2
-        op.multi(number);              //3  *  2
-        dig.passDigit('2');         //6  *  2
-        op.divid(number);              //6  /  2
+        dig.passDigit('1');
+        op.add(number);
+        dig.passDigit('3');
+        op.add(number);
+        dig.passDigit('1');
+        op.subt(number);
+        dig.passDigit('2');
+        op.multi(number);
+        dig.passDigit('2');
+        op.divid(number);
         make.setAcumulador(make.getResult());
         assertEquals(3.0,make.getAcumulador(),0.0001);
     }
+
     @Test
-    public void equalsAfterResultTest(){
-        dig.passDigit('1');         //1
-        op.add(number);                //1  +
-        dig.passDigit('3');         //1  +  3
-        op.add(number);                //4  +
-        dig.passDigit('1');         //4  -  1
-        op.subt(number);               //3  -
-        dig.passDigit('2');         //3  -  2
-        op.multi(number);              //3  *  2
-        dig.passDigit('2');         //6  *  2
-        op.divid(number);              //6  /  2
-        dig.setNumber(String.valueOf(make.getResult()));
-        assertEquals("3.0",dig.getNumber());
+    public void subtAfterAddResultTest(){
+        number.setNumber("9");
+        op.add(number);
+        number.setNumber("3");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        op.subt(number);
+        number.setNumber("4");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        assertEquals("8",out.formatOut(make.getResult()));
+
     }
 
+    @Test
+    public void equalsAfterSubtResultTest(){
+        number.setNumber("9");
+        op.subt(number);
+        number.setNumber("3");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        op.subt(number);
+        number.setNumber("6");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        assertEquals("0",out.formatOut(make.getResult()));
+
+    }
+
+    @Test
+    public void equalsAfterMultiResultTest(){
+        number.setNumber("9");
+        op.add(number);
+        number.setNumber("3");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        op.multi(number);
+        number.setNumber("2");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        assertEquals("24",out.formatOut(make.getResult()));
+
+    }
+    @Test
+    public void equalsAfterDividResultTest(){
+        number.setNumber("9");
+        op.divid(number);
+        number.setNumber("3");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        number.setNumber(String.valueOf(make.getAcumulador()));
+        op.divid(number);
+        number.setNumber("2");
+        make.setEquals(number);
+        make.setAcumulador(make.getResult());
+        assertEquals("1.5",out.formatOut(make.getResult()));
+
+    }
 
     @Test
     public void btnResultsTest() {

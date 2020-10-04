@@ -58,7 +58,6 @@ private static final String Tag = "Debug";
         dig = number  ;
         out = res;
         make = operations;
-
                                             //listeners 0-9
         btnZero.setOnClickListener(view -> {
             Character n = '0';
@@ -246,13 +245,17 @@ private static final String Tag = "Debug";
             }
 
             make.add(number);
-            saida = out.formatOut(make.getResult()) ;
+                                //negative numbers
+            if(make.getResult()<0)
+                saida ="(" + out.formatOut(make.getResult()) + ") " ;
+            else
+                saida =out.formatOut(make.getResult());
+
             saida=saida + "+";
             txtRes.setText(saida);
 
 
         });
-
         // THE SUBTRACT
         btnSub.setOnClickListener(view -> {
                                               //if the option is Sub just erase others signals if there is
@@ -263,12 +266,15 @@ private static final String Tag = "Debug";
             }
 
             make.subt(number);
-            saida = out.formatOut(make.getResult()) ;
+            //negative numbers
+            if(make.getResult()<0)
+                saida ="(" + out.formatOut(make.getResult()) + ") " ;
+            else
+                saida =out.formatOut(make.getResult());
             saida=saida + "-";
             txtRes.setText(saida);
 
         });
-
         //THE MULTIPLY
         btnMulti.setOnClickListener(view -> {
                              //if the option is Multi just erase others signals if there is
@@ -278,14 +284,17 @@ private static final String Tag = "Debug";
                 txtRes.setText(saida);
             }
 
-                make.multi(number);
-            saida = out.formatOut(make.getResult()) ;
+            make.multi(number);
+            //negative numbers
+            if(make.getResult()<0)
+                saida ="(" + out.formatOut(make.getResult()) + ") " ;
+            else
+                saida =out.formatOut(make.getResult());
             saida=saida + "x";
             txtRes.setText(saida);
 
 
         });
-
         //THE DIVISION
         btnDiv.setOnClickListener(view -> {
                                    //if the option is DIV just erase others signals if there is
@@ -296,12 +305,15 @@ private static final String Tag = "Debug";
             }
 
             make.divid(number);
-            saida = out.formatOut(make.getResult()) ;
+            //negative numbers
+            if(make.getResult()<0)
+                saida ="(" + out.formatOut(make.getResult()) + ") " ;
+            else
+                saida =out.formatOut(make.getResult());
             saida=saida + "÷";
             txtRes.setText(saida);
 
         });
-
         //EQUALS AND RESULTS
         btnEquals.setOnClickListener(view -> {
                                         //result must be generate when click on equals
@@ -312,11 +324,11 @@ private static final String Tag = "Debug";
                                         //save the last result to next operation, just in case
             make.setEquals(number);
             make.setAcumulador(make.getResult());
-             saida ="= " + out.formatOut(make.getResult()) ;
-              txtRes.setText(saida);
-            dig.reset(number);
+            saida ="= " + out.formatOut(make.getResult()) ;
+            txtRes.setText(saida);
+          //  dig.reset(number);
             saida="";
-
+           // dig.setNumber();
         });
 
     }
