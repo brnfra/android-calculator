@@ -5,11 +5,15 @@ On MIT License without any warranties!
 
 ### TODO
 
-- [x] Make auto tests
-- [x] Organize the classes
+- [x] Reduce bugs
+- [x] Basic tests
+- [ ] Unit tests
+- [ ] Refactoring the code
 - [ ] Accessibility
-- [x] Implement expressions by operations()
+- [x] Implement continuous operations
 - [ ] +/- Button
+- [ ] Button effect click
+- [ ] Keyboard compatibility
 - [ ] Add action-menu
 
 ## Sample
