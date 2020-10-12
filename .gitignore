@@ -1,7 +1,4 @@
 android_calculator_brnfra/local.properties
-/local.properties
-local.properties*
+
 /.gradle
-.gradle/
 /.idea
-.idea/
