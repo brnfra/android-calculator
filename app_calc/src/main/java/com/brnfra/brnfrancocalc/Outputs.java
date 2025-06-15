@@ -3,7 +3,12 @@ package com.brnfra.brnfrancocalc;
 import static java.lang.Math.abs;
 import static java.lang.Math.floor;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 public class Outputs implements Outputing {
+
 
     //show outputs and results
     public String formatOut(double number){
@@ -11,6 +16,7 @@ public class Outputs implements Outputing {
                             //int reach on overflow at 2^31 -1(dez dígitos calculadora chega a 12 no visor) type long - é mais adequado
                             //
                             //if number is a iteger filter to show
+
         long intNum;
         String show;
 
@@ -21,7 +27,7 @@ public class Outputs implements Outputing {
                             // integer tratment to show above eleven digits
             if ( abs(number) > 1e+7 ){
 
-                show = String.format("%(1.2e",number);
+                show = String.format(Locale.ENGLISH,"%(1.2e",number);
                 return show;
 
             }
@@ -31,7 +37,7 @@ public class Outputs implements Outputing {
                 show = Long.toString(intNum);
 
                 if ( abs(number) > 1e+7 ) {
-                    show = String.format("%(1.2e",number);
+                    show = String.format(Locale.ENGLISH,"%(1.2e",number);
 
                     return show;
                 }
@@ -41,11 +47,11 @@ public class Outputs implements Outputing {
                                 //number , if its not a integer
 
                 if ( abs(number) < 1e-2) {
-                    show = String.format("%1.2e",number);
+                    show = String.format(Locale.ENGLISH,"%(1.2e",number);
                     return show;
                 }else {
                     if(abs(number) > 1e+7){
-                        show = String.format("%(1.2e",number);
+                        show = String.format(Locale.ENGLISH,"%(1.2e",number);
                         return show;
                     }
                     show = Double.toString(number);

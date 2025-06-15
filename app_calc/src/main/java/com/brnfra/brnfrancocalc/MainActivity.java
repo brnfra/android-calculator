@@ -28,6 +28,7 @@ private static final String Tag = "Debug";
         setContentView(R.layout.activity_main);
                                                                      //objs
         final TextView txtRes =  findViewById(R.id.txtRes);
+        final TextView txtOp =  findViewById(R.id.txtOp);
         final Button btnZero =  findViewById(R.id.btnZero);
         final Button btnOne =  findViewById(R.id.btnOne);
         final Button btnTwo =  findViewById(R.id.btnTwo);
@@ -69,10 +70,8 @@ private static final String Tag = "Debug";
                 Toast avisoCenter = Toast.makeText(getApplicationContext(),"Limite de dígitos",Toast.LENGTH_SHORT);
                 avisoCenter.setGravity(Gravity.CENTER,0,0);
                 avisoCenter.show();
-
             }
             txtRes.setText(saida);
-
         });
         btnOne.setOnClickListener(view -> {
             Character n = '1';
@@ -233,6 +232,7 @@ private static final String Tag = "Debug";
             make.setOperacao(0);
             make.setEquals(number);
             txtRes.setText(number.getNumber());
+            txtOp.setText("");
 
         });
         //THE ADD
@@ -251,7 +251,8 @@ private static final String Tag = "Debug";
             else
                 saida =out.formatOut(make.getResult());
 
-            saida=saida + "+";
+            saida=saida;
+            txtOp.setText(saida + " + ");
             txtRes.setText(saida);
 
 
@@ -271,7 +272,8 @@ private static final String Tag = "Debug";
                 saida ="(" + out.formatOut(make.getResult()) + ") " ;
             else
                 saida =out.formatOut(make.getResult());
-            saida=saida + "-";
+            saida=saida;
+            txtOp.setText("-");
             txtRes.setText(saida);
 
         });
@@ -290,7 +292,8 @@ private static final String Tag = "Debug";
                 saida ="(" + out.formatOut(make.getResult()) + ") " ;
             else
                 saida =out.formatOut(make.getResult());
-            saida=saida + "x";
+            saida=saida;
+            txtOp.setText("x");
             txtRes.setText(saida);
 
 
@@ -310,7 +313,8 @@ private static final String Tag = "Debug";
                 saida ="(" + out.formatOut(make.getResult()) + ") " ;
             else
                 saida =out.formatOut(make.getResult());
-            saida=saida + "÷";
+            saida=saida;
+            txtOp.setText("÷");
             txtRes.setText(saida);
 
         });
@@ -324,8 +328,10 @@ private static final String Tag = "Debug";
                                         //save the last result to next operation, just in case
             make.setEquals(number);
             make.setAcumulador(make.getResult());
-            saida ="= " + out.formatOut(make.getResult()) ;
+            txtOp.setText("=");
+            saida = out.formatOut(make.getResult()) ;
             txtRes.setText(saida);
+
           //  dig.reset(number);
             saida="";
            // dig.setNumber();
